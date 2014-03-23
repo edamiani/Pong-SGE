@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PongV5-cap26</string>
+    <string name="start">Start!</string>
+    <string name="player">Player</string>
+    <string name="opponent">Opponent</string>
+    <string name="scores">Scores!</string>
+    <string name="difficulty_level">Difficulty level:</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
+    <string name="loading">Loading...</string>
+    <string name="game_over">Game Over!</string>
+    <string name="paused">Paused</string>
+    <string name="dialog_game_message">Are you sure you want to quit match?</string>
+    <string name="dialog_start_screen_message">Are you sure you want to quit the game?</string>
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_cancel">Cancel</string>
+
+</resources>

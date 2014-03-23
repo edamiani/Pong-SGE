@@ -1,0 +1,12 @@
+# view AndroidManifest.xml #generated:37
+-keep class com.book.pong_v5.GameActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:32
+-keep class com.book.pong_v5.MenuScreenActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:17
+-keep class com.book.pong_v5.SplashScreenActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:27
+-keep class com.book.pong_v5.StartScreenActivity { <init>(...); }
+
