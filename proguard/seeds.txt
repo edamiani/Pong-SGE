@@ -32,6 +32,7 @@ android.support.v4.view.ViewPager: void setScrollState(int)
 android.support.v4.view.ViewPager: void setAdapter(android.support.v4.view.PagerAdapter)
 android.support.v4.view.ViewPager: android.support.v4.view.PagerAdapter getAdapter()
 android.support.v4.view.ViewPager: void setOnAdapterChangeListener(android.support.v4.view.ViewPager$OnAdapterChangeListener)
+android.support.v4.view.ViewPager: int getClientWidth()
 android.support.v4.view.ViewPager: void setCurrentItem(int)
 android.support.v4.view.ViewPager: int getCurrentItem()
 android.support.v4.view.ViewPager: void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)
@@ -45,51 +46,69 @@ android.support.v4.view.ViewPager: void setPageMarginDrawable(int)
 android.support.v4.view.ViewPager: void setScrollingCacheEnabled(boolean)
 android.support.v4.view.ViewPager$SavedState
 android.support.v4.view.ViewPager$SavedState: android.os.Parcelable$Creator CREATOR
-com.book.pong_v5.GameActivity
-com.book.pong_v5.GameActivity: GameActivity()
-com.book.pong_v5.GameView: com.book.simplegameengine_v5.SGGui getGui()
-com.book.pong_v5.GameView: com.book.simplegameengine_v5.SGMusicPlayer getMusicPlayer()
-com.book.pong_v5.MenuScreenActivity
-com.book.pong_v5.MenuScreenActivity: MenuScreenActivity()
-com.book.pong_v5.MenuScreenView: com.book.simplegameengine_v5.SGGui getGui()
-com.book.pong_v5.R$dimen: int activity_horizontal_margin
-com.book.pong_v5.R$dimen: int activity_vertical_margin
-com.book.pong_v5.R$drawable: int ic_launcher
-com.book.pong_v5.R$string: int app_name
-com.book.pong_v5.R$string: int dialog_cancel
-com.book.pong_v5.R$string: int dialog_game_message
-com.book.pong_v5.R$string: int dialog_ok
-com.book.pong_v5.R$string: int dialog_start_screen_message
-com.book.pong_v5.R$string: int difficulty_level
-com.book.pong_v5.R$string: int easy
-com.book.pong_v5.R$string: int game_over
-com.book.pong_v5.R$string: int hard
-com.book.pong_v5.R$string: int loading
-com.book.pong_v5.R$string: int medium
-com.book.pong_v5.R$string: int opponent
-com.book.pong_v5.R$string: int paused
-com.book.pong_v5.R$string: int player
-com.book.pong_v5.R$string: int scores
-com.book.pong_v5.R$string: int start
-com.book.pong_v5.R$style: int AppBaseTheme
-com.book.pong_v5.R$style: int AppTheme
-com.book.pong_v5.SplashScreenActivity
-com.book.pong_v5.SplashScreenActivity: SplashScreenActivity()
-com.book.pong_v5.StartScreenActivity
-com.book.pong_v5.StartScreenActivity: StartScreenActivity()
-com.book.simplegameengine_v5.SGActivity: SGActivity()
-com.book.simplegameengine_v5.SGActivity$SGOrientation: com.book.simplegameengine_v5.SGActivity$SGOrientation[] values()
-com.book.simplegameengine_v5.SGActivity$SGOrientation: com.book.simplegameengine_v5.SGActivity$SGOrientation valueOf(java.lang.String)
-com.book.simplegameengine_v5.SGEntity$DebugDrawingStyle: com.book.simplegameengine_v5.SGEntity$DebugDrawingStyle[] values()
-com.book.simplegameengine_v5.SGEntity$DebugDrawingStyle: com.book.simplegameengine_v5.SGEntity$DebugDrawingStyle valueOf(java.lang.String)
-com.book.simplegameengine_v5.SGView: com.book.simplegameengine_v5.SGImageFactory getImageFactory()
-com.book.simplegameengine_v5.SGView: com.book.simplegameengine_v5.SGRenderer getRenderer()
-com.book.simplegameengine_v5.SGView: android.graphics.Point getViewDimensions()
-com.book.simplegameengine_v5.SGViewport$ScalingMode: com.book.simplegameengine_v5.SGViewport$ScalingMode[] values()
-com.book.simplegameengine_v5.SGViewport$ScalingMode: com.book.simplegameengine_v5.SGViewport$ScalingMode valueOf(java.lang.String)
-com.book.simplegameengine_v5.SGWidget$Alignment: com.book.simplegameengine_v5.SGWidget$Alignment[] values()
-com.book.simplegameengine_v5.SGWidget$Alignment: com.book.simplegameengine_v5.SGWidget$Alignment valueOf(java.lang.String)
-com.example.simplegameengine_v5.R$drawable: int ic_launcher
-com.example.simplegameengine_v5.R$string: int app_name
-com.example.simplegameengine_v5.R$style: int AppBaseTheme
-com.example.simplegameengine_v5.R$style: int AppTheme
+android.support.v4.widget.DrawerLayout: void setScrimColor(int)
+android.support.v4.widget.DrawerLayout: void setDrawerListener(android.support.v4.widget.DrawerLayout$DrawerListener)
+android.support.v4.widget.DrawerLayout: void setDrawerLockMode(int)
+android.support.v4.widget.DrawerLayout$SavedState
+android.support.v4.widget.DrawerLayout$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.widget.SlidingPaneLayout: void setParallaxDistance(int)
+android.support.v4.widget.SlidingPaneLayout: int getParallaxDistance()
+android.support.v4.widget.SlidingPaneLayout: void setSliderFadeColor(int)
+android.support.v4.widget.SlidingPaneLayout: int getSliderFadeColor()
+android.support.v4.widget.SlidingPaneLayout: void setCoveredFadeColor(int)
+android.support.v4.widget.SlidingPaneLayout: int getCoveredFadeColor()
+android.support.v4.widget.SlidingPaneLayout: void setPanelSlideListener(android.support.v4.widget.SlidingPaneLayout$PanelSlideListener)
+android.support.v4.widget.SlidingPaneLayout: void setShadowDrawable(android.graphics.drawable.Drawable)
+android.support.v4.widget.SlidingPaneLayout: void setShadowResource(int)
+android.support.v4.widget.SlidingPaneLayout$SavedState
+android.support.v4.widget.SlidingPaneLayout$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.widget.SwipeRefreshLayout: void setOnRefreshListener(android.support.v4.widget.SwipeRefreshLayout$OnRefreshListener)
+android.support.v4.widget.SwipeRefreshLayout: void setTriggerPercentage(float)
+android.support.v4.widget.SwipeRefreshLayout: void setRefreshing(boolean)
+android.support.v4.widget.SwipeRefreshLayout: void setTargetOffsetTopAndBottom(int)
+com.book.pong_v4.GameActivity
+com.book.pong_v4.GameActivity: GameActivity()
+com.book.pong_v4.GameView: com.book.simplegameengine_v4.SGGui getGui()
+com.book.pong_v4.GameView: com.book.simplegameengine_v4.SGMusicPlayer getMusicPlayer()
+com.book.pong_v4.MenuScreenActivity
+com.book.pong_v4.MenuScreenActivity: MenuScreenActivity()
+com.book.pong_v4.MenuScreenView: com.book.simplegameengine_v4.SGGui getGui()
+com.book.pong_v4.R$drawable: int ic_launcher
+com.book.pong_v4.R$string: int app_name
+com.book.pong_v4.R$string: int dialog_cancel
+com.book.pong_v4.R$string: int dialog_game_message
+com.book.pong_v4.R$string: int dialog_ok
+com.book.pong_v4.R$string: int dialog_start_screen_message
+com.book.pong_v4.R$string: int difficulty_level
+com.book.pong_v4.R$string: int easy
+com.book.pong_v4.R$string: int game_over
+com.book.pong_v4.R$string: int hard
+com.book.pong_v4.R$string: int loading
+com.book.pong_v4.R$string: int medium
+com.book.pong_v4.R$string: int opponent
+com.book.pong_v4.R$string: int paused
+com.book.pong_v4.R$string: int player
+com.book.pong_v4.R$string: int scores
+com.book.pong_v4.R$string: int start
+com.book.pong_v4.R$style: int AppBaseTheme
+com.book.pong_v4.R$style: int AppTheme
+com.book.pong_v4.SplashScreenActivity
+com.book.pong_v4.SplashScreenActivity: SplashScreenActivity()
+com.book.pong_v4.StartScreenActivity
+com.book.pong_v4.StartScreenActivity: StartScreenActivity()
+com.book.simplegameengine_v4.R$drawable: int ic_launcher
+com.book.simplegameengine_v4.R$string: int app_name
+com.book.simplegameengine_v4.R$style: int AppBaseTheme
+com.book.simplegameengine_v4.R$style: int AppTheme
+com.book.simplegameengine_v4.SGActivity: SGActivity()
+com.book.simplegameengine_v4.SGActivity$SGOrientation: com.book.simplegameengine_v4.SGActivity$SGOrientation[] values()
+com.book.simplegameengine_v4.SGActivity$SGOrientation: com.book.simplegameengine_v4.SGActivity$SGOrientation valueOf(java.lang.String)
+com.book.simplegameengine_v4.SGEntity$DebugDrawingStyle: com.book.simplegameengine_v4.SGEntity$DebugDrawingStyle[] values()
+com.book.simplegameengine_v4.SGEntity$DebugDrawingStyle: com.book.simplegameengine_v4.SGEntity$DebugDrawingStyle valueOf(java.lang.String)
+com.book.simplegameengine_v4.SGView: android.graphics.Point getDimensions()
+com.book.simplegameengine_v4.SGView: com.book.simplegameengine_v4.SGImageFactory getImageFactory()
+com.book.simplegameengine_v4.SGView: com.book.simplegameengine_v4.SGRenderer getRenderer()
+com.book.simplegameengine_v4.SGViewport$ScalingMode: com.book.simplegameengine_v4.SGViewport$ScalingMode[] values()
+com.book.simplegameengine_v4.SGViewport$ScalingMode: com.book.simplegameengine_v4.SGViewport$ScalingMode valueOf(java.lang.String)
+com.book.simplegameengine_v4.SGWidget$Alignment: com.book.simplegameengine_v4.SGWidget$Alignment[] values()
+com.book.simplegameengine_v4.SGWidget$Alignment: com.book.simplegameengine_v4.SGWidget$Alignment valueOf(java.lang.String)

@@ -1,6 +1,4 @@
-android.support.v4.app.ActivityCompatHoneycomb -> android.support.v4.app.a:
-    void invalidateOptionsMenu(android.app.Activity) -> a
-android.support.v4.app.BackStackRecord -> android.support.v4.app.b:
+android.support.v4.app.BackStackRecord -> android.support.v4.app.a:
     android.support.v4.app.FragmentManagerImpl mManager -> a
     android.support.v4.app.BackStackRecord$Op mHead -> b
     android.support.v4.app.BackStackRecord$Op mTail -> c
@@ -21,20 +19,17 @@ android.support.v4.app.BackStackRecord -> android.support.v4.app.b:
     int mBreadCrumbShortTitleRes -> r
     java.lang.CharSequence mBreadCrumbShortTitleText -> s
     java.lang.String toString() -> toString
-    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+    void dump$ec96877(java.lang.String,java.io.PrintWriter) -> a
     void dump(java.lang.String,java.io.PrintWriter,boolean) -> a
     void addOp(android.support.v4.app.BackStackRecord$Op) -> a
     android.support.v4.app.FragmentTransaction add(int,android.support.v4.app.Fragment,java.lang.String) -> a
-    void doAddOp(int,android.support.v4.app.Fragment,java.lang.String,int) -> a
     android.support.v4.app.FragmentTransaction detach(android.support.v4.app.Fragment) -> a
     android.support.v4.app.FragmentTransaction attach(android.support.v4.app.Fragment) -> b
     void bumpBackStackNesting(int) -> a
     int commit() -> a
-    int commitInternal(boolean) -> a
     void run() -> run
-    void popFromBackStack(boolean) -> b
-    java.lang.String getName() -> b
-android.support.v4.app.BackStackRecord$Op -> android.support.v4.app.c:
+    void popFromBackStack$1385ff() -> b
+android.support.v4.app.BackStackRecord$Op -> android.support.v4.app.b:
     android.support.v4.app.BackStackRecord$Op next -> a
     android.support.v4.app.BackStackRecord$Op prev -> b
     int cmd -> c
@@ -58,13 +53,11 @@ android.support.v4.app.BackStackState -> android.support.v4.app.BackStackState:
     android.support.v4.app.BackStackRecord instantiate(android.support.v4.app.FragmentManagerImpl) -> a
     int describeContents() -> describeContents
     void writeToParcel(android.os.Parcel,int) -> writeToParcel
-android.support.v4.app.BackStackState$1 -> android.support.v4.app.d:
-    android.support.v4.app.BackStackState createFromParcel(android.os.Parcel) -> a
-    android.support.v4.app.BackStackState[] newArray(int) -> a
+android.support.v4.app.BackStackState$1 -> android.support.v4.app.c:
     java.lang.Object[] newArray(int) -> newArray
     java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
 android.support.v4.app.Fragment -> android.support.v4.app.Fragment:
-    java.util.HashMap sClassMap -> P
+    android.support.v4.util.SimpleArrayMap sClassMap -> P
     int mState -> a
     android.view.View mAnimatingAway -> b
     int mStateAfterAnimating -> c
@@ -108,79 +101,60 @@ android.support.v4.app.Fragment -> android.support.v4.app.Fragment:
     boolean mCheckedForLoaderManager -> O
     android.support.v4.app.Fragment instantiate(android.content.Context,java.lang.String) -> a
     android.support.v4.app.Fragment instantiate(android.content.Context,java.lang.String,android.os.Bundle) -> a
-    void restoreViewState(android.os.Bundle) -> a
+    boolean isSupportFragmentClass(android.content.Context,java.lang.String) -> b
+    void restoreViewState$79e5e33f() -> a
     void setIndex(int,android.support.v4.app.Fragment) -> a
-    boolean isInBackStack() -> a
+    boolean isInBackStack() -> b
     boolean equals(java.lang.Object) -> equals
     int hashCode() -> hashCode
     java.lang.String toString() -> toString
-    android.support.v4.app.FragmentActivity getActivity() -> b
     android.content.res.Resources getResources() -> c
     boolean isDetached() -> d
-    void onHiddenChanged(boolean) -> a
-    void onActivityResult(int,int,android.content.Intent) -> a
-    android.view.LayoutInflater getLayoutInflater(android.os.Bundle) -> b
-    void onInflate(android.app.Activity,android.util.AttributeSet,android.os.Bundle) -> a
-    void onAttach(android.app.Activity) -> a
-    android.view.animation.Animation onCreateAnimation(int,boolean,int) -> a
-    void onCreate(android.os.Bundle) -> c
-    android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> a
-    void onViewCreated(android.view.View,android.os.Bundle) -> a
-    void onActivityCreated(android.os.Bundle) -> d
-    void onViewStateRestored(android.os.Bundle) -> e
-    void onStart() -> e
-    void onResume() -> f
-    void onSaveInstanceState(android.os.Bundle) -> f
+    void onHiddenChanged$1385ff() -> e
+    void onActivityResult$6eb84b52() -> f
+    android.view.LayoutInflater getLayoutInflater$2ee30c11() -> g
+    void onInflate$423a76cd() -> h
+    void onAttach$63a22f9() -> i
+    android.view.animation.Animation onCreateAnimation$24236ca7() -> j
+    void onViewCreated$65f1d89() -> k
     void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
-    void onPause() -> g
-    void onStop() -> h
     void onLowMemory() -> onLowMemory
-    void onDestroyView() -> i
-    void onDestroy() -> j
-    void initState() -> k
-    void onDetach() -> l
-    void onCreateOptionsMenu(android.view.Menu,android.view.MenuInflater) -> a
-    void onPrepareOptionsMenu(android.view.Menu) -> a
-    void onDestroyOptionsMenu() -> m
-    boolean onOptionsItemSelected(android.view.MenuItem) -> a
-    void onOptionsMenuClosed(android.view.Menu) -> b
+    void initState() -> l
+    void onDetach() -> m
+    void onDestroyOptionsMenu() -> n
     void onCreateContextMenu(android.view.ContextMenu,android.view.View,android.view.ContextMenu$ContextMenuInfo) -> onCreateContextMenu
-    boolean onContextItemSelected(android.view.MenuItem) -> b
     void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
-    void instantiateChildFragmentManager() -> n
-    void performCreate(android.os.Bundle) -> g
-    android.view.View performCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> b
-    void performActivityCreated(android.os.Bundle) -> h
-    void performStart() -> o
-    void performResume() -> p
+    void performCreate(android.os.Bundle) -> a
+    android.view.View performCreateView$469ccb8a() -> o
+    void performActivityCreated$79e5e33f() -> p
+    void performStart() -> q
+    void performResume() -> r
     void performConfigurationChanged(android.content.res.Configuration) -> a
-    void performLowMemory() -> q
-    boolean performCreateOptionsMenu(android.view.Menu,android.view.MenuInflater) -> b
-    boolean performPrepareOptionsMenu(android.view.Menu) -> c
-    boolean performOptionsItemSelected(android.view.MenuItem) -> c
-    boolean performContextItemSelected(android.view.MenuItem) -> d
-    void performOptionsMenuClosed(android.view.Menu) -> d
-    void performSaveInstanceState(android.os.Bundle) -> i
-    void performPause() -> r
-    void performStop() -> s
-    void performReallyStop() -> t
-    void performDestroyView() -> u
-    void performDestroy() -> v
-android.support.v4.app.Fragment$1 -> android.support.v4.app.e:
+    void performLowMemory() -> s
+    boolean performCreateOptionsMenu(android.view.Menu,android.view.MenuInflater) -> a
+    boolean performPrepareOptionsMenu(android.view.Menu) -> a
+    boolean performOptionsItemSelected(android.view.MenuItem) -> a
+    boolean performContextItemSelected(android.view.MenuItem) -> b
+    void performOptionsMenuClosed(android.view.Menu) -> b
+    void performSaveInstanceState(android.os.Bundle) -> b
+    void performPause() -> t
+    void performStop() -> u
+    void performReallyStop() -> v
+    void performDestroyView() -> w
+    void performDestroy() -> x
+android.support.v4.app.Fragment$1 -> android.support.v4.app.d:
     android.support.v4.app.Fragment this$0 -> a
     android.view.View findViewById(int) -> a
-android.support.v4.app.Fragment$InstantiationException -> android.support.v4.app.f:
+android.support.v4.app.Fragment$InstantiationException -> android.support.v4.app.e:
 android.support.v4.app.Fragment$SavedState -> android.support.v4.app.Fragment$SavedState:
     android.os.Bundle mState -> a
     android.os.Parcelable$Creator CREATOR -> CREATOR
     int describeContents() -> describeContents
     void writeToParcel(android.os.Parcel,int) -> writeToParcel
-android.support.v4.app.Fragment$SavedState$1 -> android.support.v4.app.g:
-    android.support.v4.app.Fragment$SavedState createFromParcel(android.os.Parcel) -> a
-    android.support.v4.app.Fragment$SavedState[] newArray(int) -> a
+android.support.v4.app.Fragment$SavedState$1 -> android.support.v4.app.f:
     java.lang.Object[] newArray(int) -> newArray
     java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
-android.support.v4.app.FragmentActivity -> android.support.v4.app.h:
+android.support.v4.app.FragmentActivity -> android.support.v4.app.g:
     android.os.Handler mHandler -> a
     android.support.v4.app.FragmentManagerImpl mFragments -> b
     android.support.v4.app.FragmentContainer mContainer -> c
@@ -192,7 +166,7 @@ android.support.v4.app.FragmentActivity -> android.support.v4.app.h:
     boolean mOptionsMenuInvalidated -> i
     boolean mCheckedForLoaderManager -> j
     boolean mLoadersStarted -> k
-    java.util.HashMap mAllLoaderManagers -> l
+    android.support.v4.util.SimpleArrayMap mAllLoaderManagers -> l
     android.support.v4.app.LoaderManagerImpl mLoaderManager -> m
     void onActivityResult(int,int,android.content.Intent) -> onActivityResult
     void onBackPressed() -> onBackPressed
@@ -209,40 +183,35 @@ android.support.v4.app.FragmentActivity -> android.support.v4.app.h:
     void onNewIntent(android.content.Intent) -> onNewIntent
     void onResume() -> onResume
     void onPostResume() -> onPostResume
-    void onResumeFragments() -> a
     boolean onPreparePanel(int,android.view.View,android.view.Menu) -> onPreparePanel
     java.lang.Object onRetainNonConfigurationInstance() -> onRetainNonConfigurationInstance
     void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
     void onStart() -> onStart
     void onStop() -> onStop
-    java.lang.Object onRetainCustomNonConfigurationInstance() -> b
-    void supportInvalidateOptionsMenu() -> c
+    void supportInvalidateOptionsMenu() -> a
     void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> dump
     java.lang.String viewToString(android.view.View) -> a
     void dumpViewHierarchy(java.lang.String,java.io.PrintWriter,android.view.View) -> a
     void doReallyStop(boolean) -> a
-    void onReallyStop() -> d
-    void onAttachFragment(android.support.v4.app.Fragment) -> a
+    void onAttachFragment$65850823() -> b
     void startActivityForResult(android.content.Intent,int) -> startActivityForResult
     void invalidateSupportFragment(java.lang.String) -> a
-    android.support.v4.app.LoaderManagerImpl getLoaderManager(java.lang.String,boolean,boolean) -> a
-android.support.v4.app.FragmentActivity$FragmentTag -> android.support.v4.app.i:
+    android.support.v4.app.LoaderManagerImpl getLoaderManager$2cd5ab55(java.lang.String) -> b
+android.support.v4.app.FragmentActivity$FragmentTag -> android.support.v4.app.h:
     int[] Fragment -> a
-android.support.v4.app.FragmentActivity$NonConfigurationInstances -> android.support.v4.app.j:
+android.support.v4.app.FragmentActivity$NonConfigurationInstances -> android.support.v4.app.i:
     java.lang.Object activity -> a
     java.lang.Object custom -> b
-    java.util.HashMap children -> c
+    android.support.v4.util.SimpleArrayMap children -> c
     java.util.ArrayList fragments -> d
-    java.util.HashMap loaders -> e
-android.support.v4.app.FragmentContainer -> android.support.v4.app.k:
+    android.support.v4.util.SimpleArrayMap loaders -> e
+android.support.v4.app.FragmentContainer -> android.support.v4.app.j:
     android.view.View findViewById(int) -> a
-android.support.v4.app.FragmentManager -> android.support.v4.app.l:
+android.support.v4.app.FragmentManager -> android.support.v4.app.k:
     android.support.v4.app.FragmentTransaction beginTransaction() -> a
     boolean executePendingTransactions() -> b
     android.support.v4.app.Fragment findFragmentByTag(java.lang.String) -> a
-android.support.v4.app.FragmentManager$OnBackStackChangedListener -> android.support.v4.app.m:
-    void onBackStackChanged() -> a
-android.support.v4.app.FragmentManagerImpl -> android.support.v4.app.n:
+android.support.v4.app.FragmentManagerImpl -> android.support.v4.app.l:
     boolean DEBUG -> a
     boolean HONEYCOMB -> b
     java.util.ArrayList mPendingActions -> c
@@ -276,21 +245,17 @@ android.support.v4.app.FragmentManagerImpl -> android.support.v4.app.n:
     android.support.v4.app.FragmentTransaction beginTransaction() -> a
     boolean executePendingTransactions() -> b
     boolean popBackStackImmediate() -> c
-    void putFragment(android.os.Bundle,java.lang.String,android.support.v4.app.Fragment) -> a
     android.support.v4.app.Fragment getFragment(android.os.Bundle,java.lang.String) -> a
     java.lang.String toString() -> toString
     void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
-    android.view.animation.Animation makeOpenCloseAnimation(android.content.Context,float,float,float,float) -> a
-    android.view.animation.Animation makeFadeAnimation(android.content.Context,float,float) -> a
+    android.view.animation.Animation makeOpenCloseAnimation$376f30fd(float,float,float,float) -> a
+    android.view.animation.Animation makeFadeAnimation$424ea1bd(float,float) -> a
     android.view.animation.Animation loadAnimation(android.support.v4.app.Fragment,int,boolean,int) -> a
-    void performPendingDeferredStart(android.support.v4.app.Fragment) -> a
     void moveToState(android.support.v4.app.Fragment,int,int,int,boolean) -> a
-    void moveToState(android.support.v4.app.Fragment) -> b
-    void moveToState(int,boolean) -> a
+    void moveToState(android.support.v4.app.Fragment) -> a
+    void moveToState$2563266(int) -> d
     void moveToState(int,int,int,boolean) -> a
-    void startPendingDeferredFragments() -> d
-    void makeActive(android.support.v4.app.Fragment) -> c
-    void makeInactive(android.support.v4.app.Fragment) -> d
+    void startPendingDeferredFragments() -> r
     void addFragment(android.support.v4.app.Fragment,boolean) -> a
     void removeFragment(android.support.v4.app.Fragment,int,int) -> a
     void hideFragment(android.support.v4.app.Fragment,int,int) -> b
@@ -299,44 +264,41 @@ android.support.v4.app.FragmentManagerImpl -> android.support.v4.app.n:
     void attachFragment(android.support.v4.app.Fragment,int,int) -> e
     android.support.v4.app.Fragment findFragmentById(int) -> a
     android.support.v4.app.Fragment findFragmentByTag(java.lang.String) -> a
-    void checkStateLoss() -> t
-    void enqueueAction(java.lang.Runnable,boolean) -> a
+    void checkStateLoss() -> s
+    void enqueueAction$574583f(java.lang.Runnable) -> a
     int allocBackStackIndex(android.support.v4.app.BackStackRecord) -> a
     void setBackStackIndex(int,android.support.v4.app.BackStackRecord) -> a
     void freeBackStackIndex(int) -> b
-    boolean execPendingActions() -> e
-    void reportBackStackChanged() -> f
+    boolean execPendingActions() -> d
+    void reportBackStackChanged() -> t
     void addBackStackState(android.support.v4.app.BackStackRecord) -> b
-    boolean popBackStackState(android.os.Handler,java.lang.String,int,int) -> a
-    java.util.ArrayList retainNonConfig() -> g
-    void saveFragmentViewState(android.support.v4.app.Fragment) -> e
-    android.os.Bundle saveFragmentBasicState(android.support.v4.app.Fragment) -> f
-    android.os.Parcelable saveAllState() -> h
+    java.util.ArrayList retainNonConfig() -> e
+    void saveFragmentViewState(android.support.v4.app.Fragment) -> b
+    android.os.Parcelable saveAllState() -> f
     void restoreAllState(android.os.Parcelable,java.util.ArrayList) -> a
     void attachActivity(android.support.v4.app.FragmentActivity,android.support.v4.app.FragmentContainer,android.support.v4.app.Fragment) -> a
-    void noteStateNotSaved() -> i
-    void dispatchCreate() -> j
-    void dispatchActivityCreated() -> k
-    void dispatchStart() -> l
-    void dispatchResume() -> m
-    void dispatchPause() -> n
-    void dispatchStop() -> o
-    void dispatchReallyStop() -> p
-    void dispatchDestroyView() -> q
-    void dispatchDestroy() -> r
+    void noteStateNotSaved() -> g
+    void dispatchCreate() -> h
+    void dispatchActivityCreated() -> i
+    void dispatchStart() -> j
+    void dispatchResume() -> k
+    void dispatchPause() -> l
+    void dispatchStop() -> m
+    void dispatchReallyStop() -> n
+    void dispatchDestroyView() -> o
+    void dispatchDestroy() -> p
     void dispatchConfigurationChanged(android.content.res.Configuration) -> a
-    void dispatchLowMemory() -> s
+    void dispatchLowMemory() -> q
     boolean dispatchCreateOptionsMenu(android.view.Menu,android.view.MenuInflater) -> a
     boolean dispatchPrepareOptionsMenu(android.view.Menu) -> a
     boolean dispatchOptionsItemSelected(android.view.MenuItem) -> a
     boolean dispatchContextItemSelected(android.view.MenuItem) -> b
     void dispatchOptionsMenuClosed(android.view.Menu) -> b
     int reverseTransit(int) -> c
-    int transitToStyleIndex(int,boolean) -> b
-android.support.v4.app.FragmentManagerImpl$1 -> android.support.v4.app.o:
+android.support.v4.app.FragmentManagerImpl$1 -> android.support.v4.app.m:
     android.support.v4.app.FragmentManagerImpl this$0 -> a
     void run() -> run
-android.support.v4.app.FragmentManagerImpl$5 -> android.support.v4.app.p:
+android.support.v4.app.FragmentManagerImpl$5 -> android.support.v4.app.n:
     android.support.v4.app.Fragment val$fragment -> a
     android.support.v4.app.FragmentManagerImpl this$0 -> b
     void onAnimationEnd(android.view.animation.Animation) -> onAnimationEnd
@@ -349,9 +311,7 @@ android.support.v4.app.FragmentManagerState -> android.support.v4.app.FragmentMa
     android.os.Parcelable$Creator CREATOR -> CREATOR
     int describeContents() -> describeContents
     void writeToParcel(android.os.Parcel,int) -> writeToParcel
-android.support.v4.app.FragmentManagerState$1 -> android.support.v4.app.q:
-    android.support.v4.app.FragmentManagerState createFromParcel(android.os.Parcel) -> a
-    android.support.v4.app.FragmentManagerState[] newArray(int) -> a
+android.support.v4.app.FragmentManagerState$1 -> android.support.v4.app.o:
     java.lang.Object[] newArray(int) -> newArray
     java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
 android.support.v4.app.FragmentState -> android.support.v4.app.FragmentState:
@@ -370,9 +330,7 @@ android.support.v4.app.FragmentState -> android.support.v4.app.FragmentState:
     android.support.v4.app.Fragment instantiate(android.support.v4.app.FragmentActivity,android.support.v4.app.Fragment) -> a
     int describeContents() -> describeContents
     void writeToParcel(android.os.Parcel,int) -> writeToParcel
-android.support.v4.app.FragmentState$1 -> android.support.v4.app.r:
-    android.support.v4.app.FragmentState createFromParcel(android.os.Parcel) -> a
-    android.support.v4.app.FragmentState[] newArray(int) -> a
+android.support.v4.app.FragmentState$1 -> android.support.v4.app.p:
     java.lang.Object[] newArray(int) -> newArray
     java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
 android.support.v4.app.FragmentTabHost -> android.support.v4.app.FragmentTabHost:
@@ -391,39 +349,29 @@ android.support.v4.app.FragmentTabHost -> android.support.v4.app.FragmentTabHost
     void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
     void onTabChanged(java.lang.String) -> onTabChanged
     android.support.v4.app.FragmentTransaction doTabChanged(java.lang.String,android.support.v4.app.FragmentTransaction) -> a
-android.support.v4.app.FragmentTabHost$1 -> android.support.v4.app.s:
 android.support.v4.app.FragmentTabHost$SavedState -> android.support.v4.app.FragmentTabHost$SavedState:
     java.lang.String curTab -> a
     android.os.Parcelable$Creator CREATOR -> CREATOR
     void writeToParcel(android.os.Parcel,int) -> writeToParcel
     java.lang.String toString() -> toString
-android.support.v4.app.FragmentTabHost$SavedState$1 -> android.support.v4.app.t:
-    android.support.v4.app.FragmentTabHost$SavedState createFromParcel(android.os.Parcel) -> a
-    android.support.v4.app.FragmentTabHost$SavedState[] newArray(int) -> a
+android.support.v4.app.FragmentTabHost$SavedState$1 -> android.support.v4.app.q:
     java.lang.Object[] newArray(int) -> newArray
     java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
-android.support.v4.app.FragmentTabHost$TabInfo -> android.support.v4.app.u:
+android.support.v4.app.FragmentTabHost$TabInfo -> android.support.v4.app.r:
     java.lang.String tag -> a
     java.lang.Class clss -> b
     android.os.Bundle args -> c
     android.support.v4.app.Fragment fragment -> d
-    android.support.v4.app.Fragment access$102(android.support.v4.app.FragmentTabHost$TabInfo,android.support.v4.app.Fragment) -> a
-    android.support.v4.app.Fragment access$100(android.support.v4.app.FragmentTabHost$TabInfo) -> a
-    java.lang.String access$200(android.support.v4.app.FragmentTabHost$TabInfo) -> b
-    java.lang.Class access$300(android.support.v4.app.FragmentTabHost$TabInfo) -> c
-    android.os.Bundle access$400(android.support.v4.app.FragmentTabHost$TabInfo) -> d
-android.support.v4.app.FragmentTransaction -> android.support.v4.app.v:
+android.support.v4.app.FragmentTransaction -> android.support.v4.app.s:
     android.support.v4.app.FragmentTransaction add(int,android.support.v4.app.Fragment,java.lang.String) -> a
     android.support.v4.app.FragmentTransaction detach(android.support.v4.app.Fragment) -> a
     android.support.v4.app.FragmentTransaction attach(android.support.v4.app.Fragment) -> b
     int commit() -> a
-android.support.v4.app.LoaderManager -> android.support.v4.app.w:
+android.support.v4.app.LoaderManager -> android.support.v4.app.t:
     boolean hasRunningLoaders() -> a
-android.support.v4.app.LoaderManager$LoaderCallbacks -> android.support.v4.app.x:
-    android.support.v4.content.Loader onCreateLoader(int,android.os.Bundle) -> a
-    void onLoadFinished(android.support.v4.content.Loader,java.lang.Object) -> a
-    void onLoaderReset(android.support.v4.content.Loader) -> a
-android.support.v4.app.LoaderManagerImpl -> android.support.v4.app.y:
+android.support.v4.app.LoaderManager$LoaderCallbacks -> android.support.v4.app.u:
+    android.support.v4.content.Loader onCreateLoader$e57f803() -> a
+android.support.v4.app.LoaderManagerImpl -> android.support.v4.app.v:
     boolean DEBUG -> a
     android.support.v4.util.SparseArrayCompat mLoaders -> b
     android.support.v4.util.SparseArrayCompat mInactiveLoaders -> c
@@ -440,9 +388,9 @@ android.support.v4.app.LoaderManagerImpl -> android.support.v4.app.y:
     void doReportStart() -> g
     void doDestroy() -> h
     java.lang.String toString() -> toString
-    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+    void dump$ec96877$79f041d6(java.lang.String,java.io.PrintWriter) -> a
     boolean hasRunningLoaders() -> a
-android.support.v4.app.LoaderManagerImpl$LoaderInfo -> android.support.v4.app.z:
+android.support.v4.app.LoaderManagerImpl$LoaderInfo -> android.support.v4.app.w:
     int mId -> a
     android.os.Bundle mArgs -> b
     android.support.v4.app.LoaderManager$LoaderCallbacks mCallbacks -> c
@@ -458,20 +406,16 @@ android.support.v4.app.LoaderManagerImpl$LoaderInfo -> android.support.v4.app.z:
     boolean mListenerRegistered -> m
     android.support.v4.app.LoaderManagerImpl$LoaderInfo mPendingLoader -> n
     android.support.v4.app.LoaderManagerImpl this$0 -> o
-    void start() -> a
-    void retain() -> b
-    void finishRetain() -> c
-    void reportStart() -> d
-    void stop() -> e
-    void destroy() -> f
+    void stop() -> a
+    void destroy() -> b
     void callOnLoadFinished(android.support.v4.content.Loader,java.lang.Object) -> a
     java.lang.String toString() -> toString
-    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
-android.support.v4.app.NoSaveStateFrameLayout -> android.support.v4.app.aa:
+    void dump$ec96877$79f041d6(java.lang.String,java.io.PrintWriter) -> a
+android.support.v4.app.NoSaveStateFrameLayout -> android.support.v4.app.x:
     android.view.ViewGroup wrap(android.view.View) -> a
     void dispatchSaveInstanceState(android.util.SparseArray) -> dispatchSaveInstanceState
     void dispatchRestoreInstanceState(android.util.SparseArray) -> dispatchRestoreInstanceState
-android.support.v4.app.SuperNotCalledException -> android.support.v4.app.ab:
+android.support.v4.app.SuperNotCalledException -> android.support.v4.app.y:
 android.support.v4.content.Loader -> android.support.v4.a.a:
     int mId -> a
     android.support.v4.content.Loader$OnLoadCompleteListener mListener -> b
@@ -479,20 +423,11 @@ android.support.v4.content.Loader -> android.support.v4.a.a:
     boolean mAbandoned -> d
     boolean mReset -> e
     boolean mContentChanged -> f
-    void registerListener(int,android.support.v4.content.Loader$OnLoadCompleteListener) -> a
+    boolean mProcessingChange -> g
     void unregisterListener(android.support.v4.content.Loader$OnLoadCompleteListener) -> a
-    void startLoading() -> a
-    void onStartLoading() -> b
-    void stopLoading() -> c
-    void onStopLoading() -> d
-    void reset() -> e
-    void onReset() -> f
-    java.lang.String dataToString(java.lang.Object) -> a
     java.lang.String toString() -> toString
-    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
 android.support.v4.content.Loader$OnLoadCompleteListener -> android.support.v4.a.b:
 android.support.v4.os.ParcelableCompat -> android.support.v4.b.a:
-    android.os.Parcelable$Creator newCreator(android.support.v4.os.ParcelableCompatCreatorCallbacks) -> a
 android.support.v4.os.ParcelableCompat$CompatCreator -> android.support.v4.b.b:
     android.support.v4.os.ParcelableCompatCreatorCallbacks mCallbacks -> a
     java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
@@ -505,189 +440,340 @@ android.support.v4.os.ParcelableCompatCreatorHoneycombMR2 -> android.support.v4.
     java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
     java.lang.Object createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> createFromParcel
     java.lang.Object[] newArray(int) -> newArray
-android.support.v4.os.ParcelableCompatCreatorHoneycombMR2Stub -> android.support.v4.b.e:
-    android.os.Parcelable$Creator instantiate(android.support.v4.os.ParcelableCompatCreatorCallbacks) -> a
-android.support.v4.util.DebugUtils -> android.support.v4.c.a:
+android.support.v4.util.ArrayMap -> android.support.v4.c.a:
+    android.support.v4.util.MapCollections mCollections -> a
+    android.support.v4.util.MapCollections getCollection() -> b
+    void putAll(java.util.Map) -> putAll
+    java.util.Set entrySet() -> entrySet
+    java.util.Set keySet() -> keySet
+    java.util.Collection values() -> values
+android.support.v4.util.ArrayMap$1 -> android.support.v4.c.b:
+    android.support.v4.util.ArrayMap this$0 -> a
+    int colGetSize() -> a
+    java.lang.Object colGetEntry(int,int) -> a
+    int colIndexOfKey(java.lang.Object) -> a
+    int colIndexOfValue(java.lang.Object) -> b
+    java.util.Map colGetMap() -> b
+    void colPut(java.lang.Object,java.lang.Object) -> a
+    java.lang.Object colSetValue(int,java.lang.Object) -> a
+    void colRemoveAt(int) -> a
+    void colClear() -> c
+android.support.v4.util.ContainerHelpers -> android.support.v4.c.c:
+    int[] EMPTY_INTS -> a
+    long[] EMPTY_LONGS -> b
+    java.lang.Object[] EMPTY_OBJECTS -> c
+    int idealIntArraySize$134621() -> a
+    boolean equal(java.lang.Object,java.lang.Object) -> a
+    int binarySearch(int[],int,int) -> a
+android.support.v4.util.DebugUtils -> android.support.v4.c.d:
     void buildShortClassTag(java.lang.Object,java.lang.StringBuilder) -> a
-android.support.v4.util.LogWriter -> android.support.v4.c.b:
+android.support.v4.util.LogWriter -> android.support.v4.c.e:
     java.lang.String mTag -> a
     java.lang.StringBuilder mBuilder -> b
     void close() -> close
     void flush() -> flush
     void write(char[],int,int) -> write
     void flushBuilder() -> a
-android.support.v4.util.SparseArrayCompat -> android.support.v4.c.c:
+android.support.v4.util.MapCollections -> android.support.v4.c.f:
+    android.support.v4.util.MapCollections$EntrySet mEntrySet -> b
+    android.support.v4.util.MapCollections$KeySet mKeySet -> c
+    android.support.v4.util.MapCollections$ValuesCollection mValues -> d
+    java.lang.Object[] toArrayHelper(int) -> b
+    java.lang.Object[] toArrayHelper(java.lang.Object[],int) -> a
+    boolean equalsSetHelper(java.util.Set,java.lang.Object) -> a
+    int colGetSize() -> a
+    java.lang.Object colGetEntry(int,int) -> a
+    int colIndexOfKey(java.lang.Object) -> a
+    int colIndexOfValue(java.lang.Object) -> b
+    java.util.Map colGetMap() -> b
+    void colPut(java.lang.Object,java.lang.Object) -> a
+    java.lang.Object colSetValue(int,java.lang.Object) -> a
+    void colRemoveAt(int) -> a
+    void colClear() -> c
+android.support.v4.util.MapCollections$ArrayIterator -> android.support.v4.c.g:
+    int mOffset -> a
+    int mSize -> b
+    int mIndex -> c
+    boolean mCanRemove -> d
+    android.support.v4.util.MapCollections this$0 -> e
+    boolean hasNext() -> hasNext
+    java.lang.Object next() -> next
+    void remove() -> remove
+android.support.v4.util.MapCollections$EntrySet -> android.support.v4.c.h:
+    android.support.v4.util.MapCollections this$0 -> a
+    boolean addAll(java.util.Collection) -> addAll
+    void clear() -> clear
+    boolean contains(java.lang.Object) -> contains
+    boolean containsAll(java.util.Collection) -> containsAll
+    boolean isEmpty() -> isEmpty
+    java.util.Iterator iterator() -> iterator
+    boolean remove(java.lang.Object) -> remove
+    boolean removeAll(java.util.Collection) -> removeAll
+    boolean retainAll(java.util.Collection) -> retainAll
+    int size() -> size
+    java.lang.Object[] toArray() -> toArray
+    java.lang.Object[] toArray(java.lang.Object[]) -> toArray
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    boolean add(java.lang.Object) -> add
+android.support.v4.util.MapCollections$KeySet -> android.support.v4.c.i:
+    android.support.v4.util.MapCollections this$0 -> a
+    boolean add(java.lang.Object) -> add
+    boolean addAll(java.util.Collection) -> addAll
+    void clear() -> clear
+    boolean contains(java.lang.Object) -> contains
+    boolean containsAll(java.util.Collection) -> containsAll
+    boolean isEmpty() -> isEmpty
+    java.util.Iterator iterator() -> iterator
+    boolean remove(java.lang.Object) -> remove
+    boolean removeAll(java.util.Collection) -> removeAll
+    boolean retainAll(java.util.Collection) -> retainAll
+    int size() -> size
+    java.lang.Object[] toArray() -> toArray
+    java.lang.Object[] toArray(java.lang.Object[]) -> toArray
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+android.support.v4.util.MapCollections$MapIterator -> android.support.v4.c.j:
+    int mEnd -> a
+    int mIndex -> b
+    boolean mEntryValid -> c
+    android.support.v4.util.MapCollections this$0 -> d
+    boolean hasNext() -> hasNext
+    void remove() -> remove
+    java.lang.Object getKey() -> getKey
+    java.lang.Object getValue() -> getValue
+    java.lang.Object setValue(java.lang.Object) -> setValue
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+    java.lang.Object next() -> next
+android.support.v4.util.MapCollections$ValuesCollection -> android.support.v4.c.k:
+    android.support.v4.util.MapCollections this$0 -> a
+    boolean add(java.lang.Object) -> add
+    boolean addAll(java.util.Collection) -> addAll
+    void clear() -> clear
+    boolean contains(java.lang.Object) -> contains
+    boolean containsAll(java.util.Collection) -> containsAll
+    boolean isEmpty() -> isEmpty
+    java.util.Iterator iterator() -> iterator
+    boolean remove(java.lang.Object) -> remove
+    boolean removeAll(java.util.Collection) -> removeAll
+    boolean retainAll(java.util.Collection) -> retainAll
+    int size() -> size
+    java.lang.Object[] toArray() -> toArray
+    java.lang.Object[] toArray(java.lang.Object[]) -> toArray
+android.support.v4.util.SimpleArrayMap -> android.support.v4.c.l:
+    java.lang.Object[] mBaseCache -> b
+    int mBaseCacheSize -> c
+    java.lang.Object[] mTwiceBaseCache -> d
+    int mTwiceBaseCacheSize -> e
+    int[] mHashes -> f
+    java.lang.Object[] mArray -> g
+    int mSize -> h
+    int indexOf(java.lang.Object,int) -> a
+    int indexOfNull() -> a
+    void allocArrays(int) -> a
+    void freeArrays(int[],java.lang.Object[],int) -> a
+    void clear() -> clear
+    boolean containsKey(java.lang.Object) -> containsKey
+    int indexOfValue(java.lang.Object) -> a
+    boolean containsValue(java.lang.Object) -> containsValue
+    java.lang.Object get(java.lang.Object) -> get
+    java.lang.Object keyAt(int) -> d
+    java.lang.Object valueAt(int) -> b
+    boolean isEmpty() -> isEmpty
+    java.lang.Object put(java.lang.Object,java.lang.Object) -> put
+    java.lang.Object remove(java.lang.Object) -> remove
+    java.lang.Object removeAt(int) -> c
+    int size() -> size
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+android.support.v4.util.SparseArrayCompat -> android.support.v4.c.m:
     java.lang.Object DELETED -> a
     boolean mGarbage -> b
     int[] mKeys -> c
     java.lang.Object[] mValues -> d
     int mSize -> e
-    void gc() -> c
+    android.support.v4.util.SparseArrayCompat clone() -> c
+    void gc() -> d
     int size() -> a
     int keyAt(int) -> a
     java.lang.Object valueAt(int) -> b
     void clear() -> b
-    int idealByteArraySize(int) -> c
-    int idealIntArraySize(int) -> d
-android.support.v4.view.KeyEventCompat -> android.support.v4.view.a:
+    java.lang.String toString() -> toString
+    java.lang.Object clone() -> clone
+android.support.v4.view.GravityCompat -> android.support.v4.view.a:
+    android.support.v4.view.GravityCompat$GravityCompatImpl IMPL -> a
+    int getAbsoluteGravity(int,int) -> a
+android.support.v4.view.GravityCompat$GravityCompatImpl -> android.support.v4.view.b:
+    int getAbsoluteGravity(int,int) -> a
+android.support.v4.view.GravityCompat$GravityCompatImplBase -> android.support.v4.view.c:
+    int getAbsoluteGravity(int,int) -> a
+android.support.v4.view.GravityCompat$GravityCompatImplJellybeanMr1 -> android.support.v4.view.d:
+    int getAbsoluteGravity(int,int) -> a
+android.support.v4.view.KeyEventCompat -> android.support.v4.view.e:
     android.support.v4.view.KeyEventCompat$KeyEventVersionImpl IMPL -> a
-    boolean hasModifiers(android.view.KeyEvent,int) -> a
-    boolean hasNoModifiers(android.view.KeyEvent) -> a
-android.support.v4.view.KeyEventCompat$BaseKeyEventVersionImpl -> android.support.v4.view.b:
-    int metaStateFilterDirectionalModifiers(int,int,int,int,int) -> a
+    boolean hasModifiers$79c6ddc0(android.view.KeyEvent) -> a
+    boolean hasNoModifiers(android.view.KeyEvent) -> b
+    void startTracking(android.view.KeyEvent) -> c
+android.support.v4.view.KeyEventCompat$BaseKeyEventVersionImpl -> android.support.v4.view.f:
+    int metaStateFilterDirectionalModifiers$2e71581f(int,int,int,int) -> a
     int normalizeMetaState(int) -> a
-    boolean metaStateHasModifiers(int,int) -> a
-    boolean metaStateHasNoModifiers(int) -> b
-android.support.v4.view.KeyEventCompat$HoneycombKeyEventVersionImpl -> android.support.v4.view.c:
-    boolean metaStateHasModifiers(int,int) -> a
-    boolean metaStateHasNoModifiers(int) -> b
-android.support.v4.view.KeyEventCompat$KeyEventVersionImpl -> android.support.v4.view.d:
-    boolean metaStateHasModifiers(int,int) -> a
-    boolean metaStateHasNoModifiers(int) -> b
-android.support.v4.view.KeyEventCompatHoneycomb -> android.support.v4.view.e:
-    boolean metaStateHasModifiers(int,int) -> a
-    boolean metaStateHasNoModifiers(int) -> a
-android.support.v4.view.MotionEventCompat -> android.support.v4.view.f:
+    boolean metaStateHasModifiers$255f299(int) -> b
+    boolean metaStateHasNoModifiers(int) -> c
+    void startTracking(android.view.KeyEvent) -> a
+android.support.v4.view.KeyEventCompat$EclairKeyEventVersionImpl -> android.support.v4.view.g:
+    void startTracking(android.view.KeyEvent) -> a
+android.support.v4.view.KeyEventCompat$HoneycombKeyEventVersionImpl -> android.support.v4.view.h:
+    int normalizeMetaState(int) -> a
+    boolean metaStateHasModifiers$255f299(int) -> b
+    boolean metaStateHasNoModifiers(int) -> c
+android.support.v4.view.KeyEventCompat$KeyEventVersionImpl -> android.support.v4.view.i:
+    boolean metaStateHasModifiers$255f299(int) -> b
+    boolean metaStateHasNoModifiers(int) -> c
+    void startTracking(android.view.KeyEvent) -> a
+android.support.v4.view.MotionEventCompat -> android.support.v4.view.j:
     android.support.v4.view.MotionEventCompat$MotionEventVersionImpl IMPL -> a
-    int getActionIndex(android.view.MotionEvent) -> a
+    int getActionMasked(android.view.MotionEvent) -> a
+    int getActionIndex(android.view.MotionEvent) -> b
     int findPointerIndex(android.view.MotionEvent,int) -> a
     int getPointerId(android.view.MotionEvent,int) -> b
     float getX(android.view.MotionEvent,int) -> c
     float getY(android.view.MotionEvent,int) -> d
-android.support.v4.view.MotionEventCompat$BaseMotionEventVersionImpl -> android.support.v4.view.g:
+    int getPointerCount(android.view.MotionEvent) -> c
+android.support.v4.view.MotionEventCompat$BaseMotionEventVersionImpl -> android.support.v4.view.k:
     int findPointerIndex(android.view.MotionEvent,int) -> a
     int getPointerId(android.view.MotionEvent,int) -> b
     float getX(android.view.MotionEvent,int) -> c
     float getY(android.view.MotionEvent,int) -> d
-android.support.v4.view.MotionEventCompat$EclairMotionEventVersionImpl -> android.support.v4.view.h:
+    int getPointerCount(android.view.MotionEvent) -> a
+android.support.v4.view.MotionEventCompat$EclairMotionEventVersionImpl -> android.support.v4.view.l:
     int findPointerIndex(android.view.MotionEvent,int) -> a
     int getPointerId(android.view.MotionEvent,int) -> b
     float getX(android.view.MotionEvent,int) -> c
     float getY(android.view.MotionEvent,int) -> d
-android.support.v4.view.MotionEventCompat$MotionEventVersionImpl -> android.support.v4.view.i:
+    int getPointerCount(android.view.MotionEvent) -> a
+android.support.v4.view.MotionEventCompat$MotionEventVersionImpl -> android.support.v4.view.m:
     int findPointerIndex(android.view.MotionEvent,int) -> a
     int getPointerId(android.view.MotionEvent,int) -> b
     float getX(android.view.MotionEvent,int) -> c
     float getY(android.view.MotionEvent,int) -> d
-android.support.v4.view.MotionEventCompatEclair -> android.support.v4.view.j:
-    int findPointerIndex(android.view.MotionEvent,int) -> a
-    int getPointerId(android.view.MotionEvent,int) -> b
-    float getX(android.view.MotionEvent,int) -> c
-    float getY(android.view.MotionEvent,int) -> d
-android.support.v4.view.PagerAdapter -> android.support.v4.view.k:
+    int getPointerCount(android.view.MotionEvent) -> a
+android.support.v4.view.PagerAdapter -> android.support.v4.view.n:
     android.database.DataSetObservable mObservable -> a
     int getCount() -> a
-    void startUpdate(android.view.ViewGroup) -> a
-    java.lang.Object instantiateItem(android.view.ViewGroup,int) -> a
-    void destroyItem(android.view.ViewGroup,int,java.lang.Object) -> a
-    void setPrimaryItem(android.view.ViewGroup,int,java.lang.Object) -> b
-    void finishUpdate(android.view.ViewGroup) -> b
-    void startUpdate(android.view.View) -> a
-    java.lang.Object instantiateItem(android.view.View,int) -> a
-    void destroyItem(android.view.View,int,java.lang.Object) -> a
-    void setPrimaryItem(android.view.View,int,java.lang.Object) -> b
-    void finishUpdate(android.view.View) -> b
-    boolean isViewFromObject(android.view.View,java.lang.Object) -> a
-    android.os.Parcelable saveState() -> b
-    void restoreState(android.os.Parcelable,java.lang.ClassLoader) -> a
-    int getItemPosition(java.lang.Object) -> a
-    void registerDataSetObserver(android.database.DataSetObserver) -> a
-    void unregisterDataSetObserver(android.database.DataSetObserver) -> b
-    float getPageWidth(int) -> a
-android.support.v4.view.VelocityTrackerCompat -> android.support.v4.view.l:
+    void destroyItem$30510aeb() -> b
+    boolean isViewFromObject$171eb1dd() -> c
+android.support.v4.view.VelocityTrackerCompat -> android.support.v4.view.o:
     android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl IMPL -> a
     float getXVelocity(android.view.VelocityTracker,int) -> a
-android.support.v4.view.VelocityTrackerCompat$BaseVelocityTrackerVersionImpl -> android.support.v4.view.m:
+    float getYVelocity(android.view.VelocityTracker,int) -> b
+android.support.v4.view.VelocityTrackerCompat$BaseVelocityTrackerVersionImpl -> android.support.v4.view.p:
     float getXVelocity(android.view.VelocityTracker,int) -> a
-android.support.v4.view.VelocityTrackerCompat$HoneycombVelocityTrackerVersionImpl -> android.support.v4.view.n:
+    float getYVelocity(android.view.VelocityTracker,int) -> b
+android.support.v4.view.VelocityTrackerCompat$HoneycombVelocityTrackerVersionImpl -> android.support.v4.view.q:
     float getXVelocity(android.view.VelocityTracker,int) -> a
-android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl -> android.support.v4.view.o:
+    float getYVelocity(android.view.VelocityTracker,int) -> b
+android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl -> android.support.v4.view.r:
     float getXVelocity(android.view.VelocityTracker,int) -> a
-android.support.v4.view.VelocityTrackerCompatHoneycomb -> android.support.v4.view.p:
-    float getXVelocity(android.view.VelocityTracker,int) -> a
-android.support.v4.view.ViewCompat -> android.support.v4.view.q:
+    float getYVelocity(android.view.VelocityTracker,int) -> b
+android.support.v4.view.ViewCompat -> android.support.v4.view.s:
     android.support.v4.view.ViewCompat$ViewCompatImpl IMPL -> a
     boolean canScrollHorizontally(android.view.View,int) -> a
     int getOverScrollMode(android.view.View) -> a
     void postInvalidateOnAnimation(android.view.View) -> b
+    void postInvalidateOnAnimation(android.view.View,int,int,int,int) -> a
     void postOnAnimation(android.view.View,java.lang.Runnable) -> a
     void setLayerType(android.view.View,int,android.graphics.Paint) -> a
-android.support.v4.view.ViewCompat$BaseViewCompatImpl -> android.support.v4.view.r:
+    int getLayerType(android.view.View) -> c
+    void setLayerPaint(android.view.View,android.graphics.Paint) -> a
+    int getLayoutDirection(android.view.View) -> d
+    boolean isOpaque(android.view.View) -> e
+android.support.v4.view.ViewCompat$BaseViewCompatImpl -> android.support.v4.view.t:
     boolean canScrollHorizontally(android.view.View,int) -> a
     int getOverScrollMode(android.view.View) -> a
     void postInvalidateOnAnimation(android.view.View) -> b
+    void postInvalidateOnAnimation(android.view.View,int,int,int,int) -> a
     void postOnAnimation(android.view.View,java.lang.Runnable) -> a
     long getFrameTime() -> a
     void setLayerType(android.view.View,int,android.graphics.Paint) -> a
-android.support.v4.view.ViewCompat$GBViewCompatImpl -> android.support.v4.view.s:
+    int getLayerType(android.view.View) -> c
+    void setLayerPaint(android.view.View,android.graphics.Paint) -> a
+    int getLayoutDirection(android.view.View) -> d
+    boolean isOpaque(android.view.View) -> e
+android.support.v4.view.ViewCompat$EclairMr1ViewCompatImpl -> android.support.v4.view.u:
+    boolean isOpaque(android.view.View) -> e
+android.support.v4.view.ViewCompat$GBViewCompatImpl -> android.support.v4.view.v:
     int getOverScrollMode(android.view.View) -> a
-android.support.v4.view.ViewCompat$HCViewCompatImpl -> android.support.v4.view.t:
+android.support.v4.view.ViewCompat$HCViewCompatImpl -> android.support.v4.view.w:
     long getFrameTime() -> a
     void setLayerType(android.view.View,int,android.graphics.Paint) -> a
-android.support.v4.view.ViewCompat$ICSViewCompatImpl -> android.support.v4.view.u:
+    int getLayerType(android.view.View) -> c
+    void setLayerPaint(android.view.View,android.graphics.Paint) -> a
+android.support.v4.view.ViewCompat$ICSViewCompatImpl -> android.support.v4.view.x:
     boolean canScrollHorizontally(android.view.View,int) -> a
-android.support.v4.view.ViewCompat$JBViewCompatImpl -> android.support.v4.view.v:
+android.support.v4.view.ViewCompat$JBViewCompatImpl -> android.support.v4.view.y:
     void postInvalidateOnAnimation(android.view.View) -> b
+    void postInvalidateOnAnimation(android.view.View,int,int,int,int) -> a
     void postOnAnimation(android.view.View,java.lang.Runnable) -> a
-android.support.v4.view.ViewCompat$JbMr1ViewCompatImpl -> android.support.v4.view.w:
-android.support.v4.view.ViewCompat$ViewCompatImpl -> android.support.v4.view.x:
+android.support.v4.view.ViewCompat$JbMr1ViewCompatImpl -> android.support.v4.view.z:
+    void setLayerPaint(android.view.View,android.graphics.Paint) -> a
+    int getLayoutDirection(android.view.View) -> d
+android.support.v4.view.ViewCompat$KitKatViewCompatImpl -> android.support.v4.view.aa:
+android.support.v4.view.ViewCompat$ViewCompatImpl -> android.support.v4.view.ab:
     boolean canScrollHorizontally(android.view.View,int) -> a
     int getOverScrollMode(android.view.View) -> a
     void postInvalidateOnAnimation(android.view.View) -> b
+    void postInvalidateOnAnimation(android.view.View,int,int,int,int) -> a
     void postOnAnimation(android.view.View,java.lang.Runnable) -> a
     void setLayerType(android.view.View,int,android.graphics.Paint) -> a
-android.support.v4.view.ViewCompatGingerbread -> android.support.v4.view.y:
-    int getOverScrollMode(android.view.View) -> a
-android.support.v4.view.ViewCompatHC -> android.support.v4.view.z:
-    long getFrameTime() -> a
-    void setLayerType(android.view.View,int,android.graphics.Paint) -> a
-android.support.v4.view.ViewCompatICS -> android.support.v4.view.aa:
-    boolean canScrollHorizontally(android.view.View,int) -> a
-android.support.v4.view.ViewCompatJB -> android.support.v4.view.ab:
-    void postInvalidateOnAnimation(android.view.View) -> a
-    void postOnAnimation(android.view.View,java.lang.Runnable) -> a
+    int getLayerType(android.view.View) -> c
+    void setLayerPaint(android.view.View,android.graphics.Paint) -> a
+    int getLayoutDirection(android.view.View) -> d
+    boolean isOpaque(android.view.View) -> e
 android.support.v4.view.ViewPager -> android.support.v4.view.ViewPager:
     int[] LAYOUT_ATTRS -> a
-    java.util.Comparator COMPARATOR -> b
-    android.view.animation.Interpolator sInterpolator -> c
-    java.util.ArrayList mItems -> d
-    android.support.v4.view.ViewPager$ItemInfo mTempItem -> e
-    android.graphics.Rect mTempRect -> f
-    android.support.v4.view.PagerAdapter mAdapter -> g
-    int mCurItem -> h
-    int mRestoredCurItem -> i
-    android.os.Parcelable mRestoredAdapterState -> j
-    java.lang.ClassLoader mRestoredClassLoader -> k
-    android.widget.Scroller mScroller -> l
-    android.support.v4.view.ViewPager$PagerObserver mObserver -> m
-    int mPageMargin -> n
-    android.graphics.drawable.Drawable mMarginDrawable -> o
-    int mTopPageBounds -> p
-    int mBottomPageBounds -> q
-    float mFirstOffset -> r
-    float mLastOffset -> s
-    int mChildWidthMeasureSpec -> t
-    int mChildHeightMeasureSpec -> u
-    boolean mInLayout -> v
-    boolean mScrollingCacheEnabled -> w
-    boolean mPopulatePending -> x
-    int mOffscreenPageLimit -> y
-    boolean mIsBeingDragged -> z
-    boolean mIsUnableToDrag -> A
-    int mDefaultGutterSize -> B
-    int mGutterSize -> C
-    int mTouchSlop -> D
-    float mInitialMotionX -> E
+    int mExpectedAdapterCount -> b
+    java.util.Comparator COMPARATOR -> c
+    android.view.animation.Interpolator sInterpolator -> d
+    java.util.ArrayList mItems -> e
+    android.support.v4.view.ViewPager$ItemInfo mTempItem -> f
+    android.graphics.Rect mTempRect -> g
+    android.support.v4.view.PagerAdapter mAdapter -> h
+    int mCurItem -> i
+    int mRestoredCurItem -> j
+    android.os.Parcelable mRestoredAdapterState -> k
+    java.lang.ClassLoader mRestoredClassLoader -> l
+    android.widget.Scroller mScroller -> m
+    android.support.v4.view.ViewPager$PagerObserver mObserver -> n
+    int mPageMargin -> o
+    android.graphics.drawable.Drawable mMarginDrawable -> p
+    int mTopPageBounds -> q
+    int mBottomPageBounds -> r
+    float mFirstOffset -> s
+    float mLastOffset -> t
+    int mChildWidthMeasureSpec -> u
+    int mChildHeightMeasureSpec -> v
+    boolean mInLayout -> w
+    boolean mScrollingCacheEnabled -> x
+    boolean mPopulatePending -> y
+    int mOffscreenPageLimit -> z
+    boolean mIsBeingDragged -> A
+    boolean mIsUnableToDrag -> B
+    int mDefaultGutterSize -> C
+    int mGutterSize -> D
+    int mTouchSlop -> E
     float mLastMotionX -> F
     float mLastMotionY -> G
-    int mActivePointerId -> H
-    android.view.VelocityTracker mVelocityTracker -> I
-    int mMinimumVelocity -> J
-    int mMaximumVelocity -> K
-    int mFlingDistance -> L
-    int mCloseEnough -> M
-    int mSeenPositionMin -> N
-    int mSeenPositionMax -> O
+    float mInitialMotionX -> H
+    float mInitialMotionY -> I
+    int mActivePointerId -> J
+    android.view.VelocityTracker mVelocityTracker -> K
+    int mMinimumVelocity -> L
+    int mMaximumVelocity -> M
+    int mFlingDistance -> N
+    int mCloseEnough -> O
     boolean mFakeDragging -> P
     android.support.v4.widget.EdgeEffectCompat mLeftEdge -> Q
     android.support.v4.widget.EdgeEffectCompat mRightEdge -> R
@@ -708,11 +794,11 @@ android.support.v4.view.ViewPager -> android.support.v4.view.ViewPager:
     void onDetachedFromWindow() -> onDetachedFromWindow
     void setScrollState(int) -> setScrollState
     void setAdapter(android.support.v4.view.PagerAdapter) -> setAdapter
-    void removeNonDecorViews() -> f
     android.support.v4.view.PagerAdapter getAdapter() -> getAdapter
     void setOnAdapterChangeListener(android.support.v4.view.ViewPager$OnAdapterChangeListener) -> setOnAdapterChangeListener
+    int getClientWidth() -> getClientWidth
     void setCurrentItem(int) -> setCurrentItem
-    void setCurrentItem(int,boolean) -> a
+    void setCurrentItem$2563266(int) -> setCurrentItem$2563266
     int getCurrentItem() -> getCurrentItem
     void setCurrentItemInternal(int,boolean,boolean) -> a
     void setCurrentItemInternal(int,boolean,boolean,int) -> a
@@ -728,47 +814,44 @@ android.support.v4.view.ViewPager -> android.support.v4.view.ViewPager:
     void setPageMarginDrawable(int) -> setPageMarginDrawable
     boolean verifyDrawable(android.graphics.drawable.Drawable) -> verifyDrawable
     void drawableStateChanged() -> drawableStateChanged
-    float distanceInfluenceForSnapDuration(float) -> a
-    void smoothScrollTo(int,int,int) -> a
-    android.support.v4.view.ViewPager$ItemInfo addNewItem(int,int) -> a
+    android.support.v4.view.ViewPager$ItemInfo addNewItem$3af7e890(int) -> a
     void dataSetChanged() -> a
-    void populate() -> b
-    void populate(int) -> a
+    void populate() -> c
+    void populate(int) -> b
+    void sortChildDrawingOrder() -> d
     void calculatePageOffsets(android.support.v4.view.ViewPager$ItemInfo,int,android.support.v4.view.ViewPager$ItemInfo) -> a
     android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
     void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
     void addView(android.view.View,int,android.view.ViewGroup$LayoutParams) -> addView
-    android.support.v4.view.ViewPager$ItemInfo infoForChild(android.view.View) -> a
-    android.support.v4.view.ViewPager$ItemInfo infoForAnyChild(android.view.View) -> b
-    android.support.v4.view.ViewPager$ItemInfo infoForPosition(int) -> b
+    void removeView(android.view.View) -> removeView
+    android.support.v4.view.ViewPager$ItemInfo infoForChild$31e08638() -> e
+    android.support.v4.view.ViewPager$ItemInfo infoForAnyChild(android.view.View) -> a
+    android.support.v4.view.ViewPager$ItemInfo infoForPosition(int) -> c
     void onAttachedToWindow() -> onAttachedToWindow
     void onMeasure(int,int) -> onMeasure
     void onSizeChanged(int,int,int,int) -> onSizeChanged
     void recomputeScrollPosition(int,int,int,int) -> a
     void onLayout(boolean,int,int,int,int) -> onLayout
     void computeScroll() -> computeScroll
-    boolean pageScrolled(int) -> d
-    void onPageScrolled(int,float,int) -> a
+    boolean pageScrolled$134632() -> f
+    void onPageScrolled$486775f1() -> g
     void completeScroll(boolean) -> a
-    boolean isGutterDrag(float,float) -> a
-    void enableLayers(boolean) -> b
     boolean onInterceptTouchEvent(android.view.MotionEvent) -> onInterceptTouchEvent
     boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
-    boolean performDrag(float) -> b
-    android.support.v4.view.ViewPager$ItemInfo infoForCurrentScrollPosition() -> g
-    int determineTargetPage(int,float,int,int) -> a
+    void requestParentDisallowInterceptTouchEvent$1385ff() -> h
+    boolean performDrag(float) -> a
+    android.support.v4.view.ViewPager$ItemInfo infoForCurrentScrollPosition() -> i
     void draw(android.graphics.Canvas) -> draw
     void onDraw(android.graphics.Canvas) -> onDraw
     void onSecondaryPointerUp(android.view.MotionEvent) -> a
-    void endDrag() -> h
+    void endDrag() -> j
     void setScrollingCacheEnabled(boolean) -> setScrollingCacheEnabled
+    boolean canScrollHorizontally(int) -> canScrollHorizontally
     boolean canScroll(android.view.View,boolean,int,int,int) -> a
     boolean dispatchKeyEvent(android.view.KeyEvent) -> dispatchKeyEvent
-    boolean executeKeyEvent(android.view.KeyEvent) -> a
-    boolean arrowScroll(int) -> c
+    boolean arrowScroll(int) -> d
     android.graphics.Rect getChildRectInPagerCoordinates(android.graphics.Rect,android.view.View) -> a
-    boolean pageLeft() -> c
-    boolean pageRight() -> d
+    boolean pageLeft() -> k
     void addFocusables(java.util.ArrayList,int,int) -> addFocusables
     void addTouchables(java.util.ArrayList) -> addTouchables
     boolean onRequestFocusInDescendants(int,android.graphics.Rect) -> onRequestFocusInDescendants
@@ -777,9 +860,8 @@ android.support.v4.view.ViewPager -> android.support.v4.view.ViewPager:
     android.view.ViewGroup$LayoutParams generateLayoutParams(android.view.ViewGroup$LayoutParams) -> generateLayoutParams
     boolean checkLayoutParams(android.view.ViewGroup$LayoutParams) -> checkLayoutParams
     android.view.ViewGroup$LayoutParams generateLayoutParams(android.util.AttributeSet) -> generateLayoutParams
-    int[] access$400() -> e
+    int[] access$400() -> b
 android.support.v4.view.ViewPager$1 -> android.support.v4.view.ac:
-    int compare(android.support.v4.view.ViewPager$ItemInfo,android.support.v4.view.ViewPager$ItemInfo) -> a
     int compare(java.lang.Object,java.lang.Object) -> compare
 android.support.v4.view.ViewPager$2 -> android.support.v4.view.ad:
     float getInterpolation(float) -> getInterpolation
@@ -798,13 +880,8 @@ android.support.v4.view.ViewPager$LayoutParams -> android.support.v4.view.ag:
     int position -> e
     int childIndex -> f
 android.support.v4.view.ViewPager$OnAdapterChangeListener -> android.support.v4.view.ah:
-    void onAdapterChanged(android.support.v4.view.PagerAdapter,android.support.v4.view.PagerAdapter) -> a
 android.support.v4.view.ViewPager$OnPageChangeListener -> android.support.v4.view.ai:
-    void onPageScrolled(int,float,int) -> a
-    void onPageSelected(int) -> a
-    void onPageScrollStateChanged(int) -> b
 android.support.v4.view.ViewPager$PageTransformer -> android.support.v4.view.aj:
-    void transformPage(android.view.View,float) -> a
 android.support.v4.view.ViewPager$PagerObserver -> android.support.v4.view.ak:
     android.support.v4.view.ViewPager this$0 -> a
     void onChanged() -> onChanged
@@ -817,14 +894,100 @@ android.support.v4.view.ViewPager$SavedState -> android.support.v4.view.ViewPage
     void writeToParcel(android.os.Parcel,int) -> writeToParcel
     java.lang.String toString() -> toString
 android.support.v4.view.ViewPager$SavedState$1 -> android.support.v4.view.al:
-    android.support.v4.view.ViewPager$SavedState createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> b
-    android.support.v4.view.ViewPager$SavedState[] newArray(int) -> b
     java.lang.Object[] newArray(int) -> a
     java.lang.Object createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> a
 android.support.v4.view.ViewPager$ViewPositionComparator -> android.support.v4.view.am:
-    int compare(android.view.View,android.view.View) -> a
     int compare(java.lang.Object,java.lang.Object) -> compare
-android.support.v4.widget.EdgeEffectCompat -> android.support.v4.d.a:
+android.support.v4.widget.DrawerLayout -> android.support.v4.widget.DrawerLayout:
+    int[] LAYOUT_ATTRS -> a
+    int mMinDrawerMargin -> b
+    int mScrimColor -> c
+    float mScrimOpacity -> d
+    android.graphics.Paint mScrimPaint -> e
+    android.support.v4.widget.ViewDragHelper mLeftDragger -> f
+    android.support.v4.widget.ViewDragHelper mRightDragger -> g
+    android.support.v4.widget.DrawerLayout$ViewDragCallback mLeftCallback -> h
+    android.support.v4.widget.DrawerLayout$ViewDragCallback mRightCallback -> i
+    int mDrawerState -> j
+    boolean mInLayout -> k
+    boolean mFirstLayout -> l
+    int mLockModeLeft -> m
+    int mLockModeRight -> n
+    boolean mDisallowInterceptRequested -> o
+    boolean mChildrenCanceledTouch -> p
+    android.support.v4.widget.DrawerLayout$DrawerListener mListener -> q
+    float mInitialMotionX -> r
+    float mInitialMotionY -> s
+    android.graphics.drawable.Drawable mShadowLeft -> t
+    android.graphics.drawable.Drawable mShadowRight -> u
+    void setScrimColor(int) -> setScrimColor
+    void setDrawerListener(android.support.v4.widget.DrawerLayout$DrawerListener) -> setDrawerListener
+    void setDrawerLockMode(int) -> setDrawerLockMode
+    void setDrawerLockMode(int,int) -> a
+    int getDrawerLockMode(android.view.View) -> a
+    void updateDrawerState$5cdeb3e3(int,android.view.View) -> a
+    void setDrawerViewOffset(android.view.View,float) -> a
+    float getDrawerViewOffset(android.view.View) -> b
+    int getDrawerViewAbsoluteGravity(android.view.View) -> e
+    boolean checkDrawerViewAbsoluteGravity(android.view.View,int) -> a
+    android.view.View findDrawerWithGravity(int) -> a
+    void onDetachedFromWindow() -> onDetachedFromWindow
+    void onAttachedToWindow() -> onAttachedToWindow
+    void onMeasure(int,int) -> onMeasure
+    void onLayout(boolean,int,int,int,int) -> onLayout
+    void requestLayout() -> requestLayout
+    void computeScroll() -> computeScroll
+    boolean drawChild(android.graphics.Canvas,android.view.View,long) -> drawChild
+    boolean isContentView(android.view.View) -> f
+    boolean isDrawerView(android.view.View) -> c
+    boolean onInterceptTouchEvent(android.view.MotionEvent) -> onInterceptTouchEvent
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    void requestDisallowInterceptTouchEvent(boolean) -> requestDisallowInterceptTouchEvent
+    void closeDrawers(boolean) -> a
+    void openDrawer(android.view.View) -> g
+    void closeDrawer(android.view.View) -> d
+    android.view.ViewGroup$LayoutParams generateDefaultLayoutParams() -> generateDefaultLayoutParams
+    android.view.ViewGroup$LayoutParams generateLayoutParams(android.view.ViewGroup$LayoutParams) -> generateLayoutParams
+    boolean checkLayoutParams(android.view.ViewGroup$LayoutParams) -> checkLayoutParams
+    android.view.ViewGroup$LayoutParams generateLayoutParams(android.util.AttributeSet) -> generateLayoutParams
+    android.view.View findVisibleDrawer() -> b
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    boolean onKeyUp(int,android.view.KeyEvent) -> onKeyUp
+    void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
+    android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
+    int[] access$100() -> a
+android.support.v4.widget.DrawerLayout$DrawerListener -> android.support.v4.widget.a:
+android.support.v4.widget.DrawerLayout$LayoutParams -> android.support.v4.widget.b:
+    int gravity -> a
+    float onScreen -> b
+    boolean isPeeking -> c
+    boolean knownOpen -> d
+android.support.v4.widget.DrawerLayout$SavedState -> android.support.v4.widget.DrawerLayout$SavedState:
+    int openDrawerGravity -> a
+    int lockModeLeft -> b
+    int lockModeRight -> c
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.widget.DrawerLayout$SavedState$1 -> android.support.v4.widget.c:
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.widget.DrawerLayout$ViewDragCallback -> android.support.v4.widget.d:
+    int mAbsGravity -> b
+    android.support.v4.widget.ViewDragHelper mDragger -> c
+    java.lang.Runnable mPeekRunnable -> d
+    android.support.v4.widget.DrawerLayout this$0 -> a
+    void removeCallbacks() -> a
+    boolean tryCaptureView$5359dc96(android.view.View) -> a
+    void onViewDragStateChanged(int) -> a
+    void onViewPositionChanged$5b6f797d(android.view.View,int) -> a
+    void onViewCaptured$5359dc9a(android.view.View) -> b
+    void onViewReleased$17e2ac03(android.view.View,float) -> a
+    void onEdgeTouched$255f295() -> b
+    void onEdgeDragStarted(int,int) -> a
+    int getViewHorizontalDragRange(android.view.View) -> c
+    int clampViewPositionHorizontal$17e143b0(android.view.View,int) -> b
+    int clampViewPositionVertical$17e143b0(android.view.View) -> d
+android.support.v4.widget.EdgeEffectCompat -> android.support.v4.widget.e:
     java.lang.Object mEdgeEffect -> a
     android.support.v4.widget.EdgeEffectCompat$EdgeEffectImpl IMPL -> b
     void setSize(int,int) -> a
@@ -833,258 +996,413 @@ android.support.v4.widget.EdgeEffectCompat -> android.support.v4.d.a:
     boolean onPull(float) -> a
     boolean onRelease() -> c
     boolean draw(android.graphics.Canvas) -> a
-android.support.v4.widget.EdgeEffectCompat$BaseEdgeEffectImpl -> android.support.v4.d.b:
+android.support.v4.widget.EdgeEffectCompat$BaseEdgeEffectImpl -> android.support.v4.widget.f:
     void setSize(java.lang.Object,int,int) -> a
     boolean isFinished(java.lang.Object) -> a
     void finish(java.lang.Object) -> b
     boolean onPull(java.lang.Object,float) -> a
     boolean onRelease(java.lang.Object) -> c
     boolean draw(java.lang.Object,android.graphics.Canvas) -> a
-android.support.v4.widget.EdgeEffectCompat$EdgeEffectIcsImpl -> android.support.v4.d.c:
+android.support.v4.widget.EdgeEffectCompat$EdgeEffectIcsImpl -> android.support.v4.widget.g:
     void setSize(java.lang.Object,int,int) -> a
     boolean isFinished(java.lang.Object) -> a
     void finish(java.lang.Object) -> b
     boolean onPull(java.lang.Object,float) -> a
     boolean onRelease(java.lang.Object) -> c
     boolean draw(java.lang.Object,android.graphics.Canvas) -> a
-android.support.v4.widget.EdgeEffectCompat$EdgeEffectImpl -> android.support.v4.d.d:
+android.support.v4.widget.EdgeEffectCompat$EdgeEffectImpl -> android.support.v4.widget.h:
     void setSize(java.lang.Object,int,int) -> a
     boolean isFinished(java.lang.Object) -> a
     void finish(java.lang.Object) -> b
     boolean onPull(java.lang.Object,float) -> a
     boolean onRelease(java.lang.Object) -> c
     boolean draw(java.lang.Object,android.graphics.Canvas) -> a
-android.support.v4.widget.EdgeEffectCompatIcs -> android.support.v4.d.e:
-    void setSize(java.lang.Object,int,int) -> a
+android.support.v4.widget.ScrollerCompat -> android.support.v4.widget.i:
+    java.lang.Object mScroller -> a
+    android.support.v4.widget.ScrollerCompat$ScrollerCompatImpl IMPL -> b
+    boolean isFinished() -> a
+    int getCurrX() -> b
+    int getCurrY() -> c
+    int getFinalX() -> d
+    int getFinalY() -> e
+    boolean computeScrollOffset() -> f
+    void startScroll(int,int,int,int,int) -> a
+    void abortAnimation() -> g
+android.support.v4.widget.ScrollerCompat$ScrollerCompatImpl -> android.support.v4.widget.j:
     boolean isFinished(java.lang.Object) -> a
-    void finish(java.lang.Object) -> b
-    boolean onPull(java.lang.Object,float) -> a
-    boolean onRelease(java.lang.Object) -> c
-    boolean draw(java.lang.Object,android.graphics.Canvas) -> a
-com.book.pong_v5.EntBall -> com.book.pong_v5.a:
-    int mCollisionType -> b
-    int mDifficultyOffset -> c
-    float mSpeed -> d
-    android.graphics.PointF mVelocity -> a
-    float[] mCosTable -> e
-    float[] mSinTable -> f
+    int getCurrX(java.lang.Object) -> b
+    int getCurrY(java.lang.Object) -> c
+    boolean computeScrollOffset(java.lang.Object) -> d
+    void startScroll(java.lang.Object,int,int,int,int,int) -> a
+    void abortAnimation(java.lang.Object) -> e
+    int getFinalX(java.lang.Object) -> f
+    int getFinalY(java.lang.Object) -> g
+android.support.v4.widget.ScrollerCompat$ScrollerCompatImplBase -> android.support.v4.widget.k:
+    boolean isFinished(java.lang.Object) -> a
+    int getCurrX(java.lang.Object) -> b
+    int getCurrY(java.lang.Object) -> c
+    boolean computeScrollOffset(java.lang.Object) -> d
+    void startScroll(java.lang.Object,int,int,int,int,int) -> a
+    void abortAnimation(java.lang.Object) -> e
+    int getFinalX(java.lang.Object) -> f
+    int getFinalY(java.lang.Object) -> g
+android.support.v4.widget.ScrollerCompat$ScrollerCompatImplGingerbread -> android.support.v4.widget.l:
+    boolean isFinished(java.lang.Object) -> a
+    int getCurrX(java.lang.Object) -> b
+    int getCurrY(java.lang.Object) -> c
+    boolean computeScrollOffset(java.lang.Object) -> d
+    void startScroll(java.lang.Object,int,int,int,int,int) -> a
+    void abortAnimation(java.lang.Object) -> e
+    int getFinalX(java.lang.Object) -> f
+    int getFinalY(java.lang.Object) -> g
+android.support.v4.widget.ScrollerCompat$ScrollerCompatImplIcs -> android.support.v4.widget.m:
+android.support.v4.widget.SlidingPaneLayout -> android.support.v4.widget.SlidingPaneLayout:
+    int mSliderFadeColor -> b
+    int mCoveredFadeColor -> c
+    android.graphics.drawable.Drawable mShadowDrawable -> d
+    int mOverhangSize -> e
+    boolean mCanSlide -> f
+    android.view.View mSlideableView -> g
+    float mSlideOffset -> h
+    float mParallaxOffset -> i
+    int mSlideRange -> j
+    boolean mIsUnableToDrag -> k
+    int mParallaxBy -> l
+    float mInitialMotionX -> m
+    float mInitialMotionY -> n
+    android.support.v4.widget.SlidingPaneLayout$PanelSlideListener mPanelSlideListener -> o
+    android.support.v4.widget.ViewDragHelper mDragHelper -> p
+    boolean mPreservedOpenState -> q
+    boolean mFirstLayout -> r
+    android.graphics.Rect mTmpRect -> s
+    java.util.ArrayList mPostedRunnables -> t
+    android.support.v4.widget.SlidingPaneLayout$SlidingPanelLayoutImpl IMPL -> a
+    void setParallaxDistance(int) -> setParallaxDistance
+    int getParallaxDistance() -> getParallaxDistance
+    void setSliderFadeColor(int) -> setSliderFadeColor
+    int getSliderFadeColor() -> getSliderFadeColor
+    void setCoveredFadeColor(int) -> setCoveredFadeColor
+    int getCoveredFadeColor() -> getCoveredFadeColor
+    void setPanelSlideListener(android.support.v4.widget.SlidingPaneLayout$PanelSlideListener) -> setPanelSlideListener
+    void onAttachedToWindow() -> onAttachedToWindow
+    void onDetachedFromWindow() -> onDetachedFromWindow
+    void onMeasure(int,int) -> onMeasure
+    void onLayout(boolean,int,int,int,int) -> onLayout
+    void onSizeChanged(int,int,int,int) -> onSizeChanged
+    void requestChildFocus(android.view.View,android.view.View) -> requestChildFocus
+    boolean onInterceptTouchEvent(android.view.MotionEvent) -> onInterceptTouchEvent
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    boolean closePane$5359dc96$134632() -> a
+    void dimChildView(android.view.View,float,int) -> a
+    boolean drawChild(android.graphics.Canvas,android.view.View,long) -> drawChild
+    void invalidateChildRegion(android.view.View) -> a
+    boolean smoothSlideTo$254957c(float) -> a
+    void computeScroll() -> computeScroll
+    void setShadowDrawable(android.graphics.drawable.Drawable) -> setShadowDrawable
+    void setShadowResource(int) -> setShadowResource
+    void draw(android.graphics.Canvas) -> draw
+    boolean isDimmed(android.view.View) -> b
+    android.view.ViewGroup$LayoutParams generateDefaultLayoutParams() -> generateDefaultLayoutParams
+    android.view.ViewGroup$LayoutParams generateLayoutParams(android.view.ViewGroup$LayoutParams) -> generateLayoutParams
+    boolean checkLayoutParams(android.view.ViewGroup$LayoutParams) -> checkLayoutParams
+    android.view.ViewGroup$LayoutParams generateLayoutParams(android.util.AttributeSet) -> generateLayoutParams
+    android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
+    void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
+    void access$900(android.support.v4.widget.SlidingPaneLayout,android.view.View) -> a
+    java.util.ArrayList access$1000(android.support.v4.widget.SlidingPaneLayout) -> a
+android.support.v4.widget.SlidingPaneLayout$DisableLayerRunnable -> android.support.v4.widget.n:
+    android.view.View mChildView -> a
+    android.support.v4.widget.SlidingPaneLayout this$0 -> b
+    void run() -> run
+android.support.v4.widget.SlidingPaneLayout$LayoutParams -> android.support.v4.widget.o:
+    int[] ATTRS -> e
+    float weight -> a
+    boolean slideable -> b
+    boolean dimWhenOffset -> c
+    android.graphics.Paint dimPaint -> d
+android.support.v4.widget.SlidingPaneLayout$PanelSlideListener -> android.support.v4.widget.p:
+android.support.v4.widget.SlidingPaneLayout$SavedState -> android.support.v4.widget.SlidingPaneLayout$SavedState:
+    boolean isOpen -> a
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.widget.SlidingPaneLayout$SavedState$1 -> android.support.v4.widget.q:
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.widget.SlidingPaneLayout$SlidingPanelLayoutImpl -> android.support.v4.widget.r:
+    void invalidateChildRegion(android.support.v4.widget.SlidingPaneLayout,android.view.View) -> a
+android.support.v4.widget.SlidingPaneLayout$SlidingPanelLayoutImplBase -> android.support.v4.widget.s:
+    void invalidateChildRegion(android.support.v4.widget.SlidingPaneLayout,android.view.View) -> a
+android.support.v4.widget.SlidingPaneLayout$SlidingPanelLayoutImplJB -> android.support.v4.widget.t:
+    java.lang.reflect.Method mGetDisplayList -> a
+    java.lang.reflect.Field mRecreateDisplayList -> b
+    void invalidateChildRegion(android.support.v4.widget.SlidingPaneLayout,android.view.View) -> a
+android.support.v4.widget.SlidingPaneLayout$SlidingPanelLayoutImplJBMR1 -> android.support.v4.widget.u:
+    void invalidateChildRegion(android.support.v4.widget.SlidingPaneLayout,android.view.View) -> a
+android.support.v4.widget.ViewDragHelper -> android.support.v4.widget.v:
+    int mDragState -> a
+    int mTouchSlop -> b
+    int mActivePointerId -> c
+    float[] mInitialMotionX -> d
+    float[] mInitialMotionY -> e
+    float[] mLastMotionX -> f
+    float[] mLastMotionY -> g
+    int[] mInitialEdgesTouched -> h
+    int[] mEdgeDragsInProgress -> i
+    int[] mEdgeDragsLocked -> j
+    int mPointersDown -> k
+    android.view.VelocityTracker mVelocityTracker -> l
+    float mMaxVelocity -> m
+    float mMinVelocity -> n
+    int mEdgeSize -> o
+    int mTrackingEdges -> p
+    android.support.v4.widget.ScrollerCompat mScroller -> q
+    android.support.v4.widget.ViewDragHelper$Callback mCallback -> r
+    android.view.View mCapturedView -> s
+    boolean mReleaseInProgress -> t
+    android.view.ViewGroup mParentView -> u
+    android.view.animation.Interpolator sInterpolator -> v
+    java.lang.Runnable mSetIdleRunnable -> w
+    int getViewDragState() -> a
+    int getEdgeSize() -> b
+    void captureChildView(android.view.View,int) -> a
+    android.view.View getCapturedView() -> c
+    int getTouchSlop() -> d
+    void cancel() -> e
+    void abort() -> f
+    boolean smoothSlideViewTo(android.view.View,int,int) -> a
+    boolean settleCapturedViewAt(int,int) -> a
+    boolean forceSettleCapturedViewAt(int,int,int,int) -> a
+    int computeAxisDuration(int,int,int) -> a
+    int clampMag(int,int,int) -> b
+    float clampMag(float,float,float) -> a
+    boolean continueSettling$138603() -> g
+    void dispatchViewReleased$2548a35(float) -> a
+    void clearMotionHistory(int) -> a
+    void saveInitialMotion(float,float,int) -> a
+    void saveLastMotion(android.view.MotionEvent) -> c
+    void setDragState(int) -> b
+    boolean tryCaptureViewForDrag(android.view.View,int) -> b
+    boolean shouldInterceptTouchEvent(android.view.MotionEvent) -> a
+    void processTouchEvent(android.view.MotionEvent) -> b
+    void reportNewEdgeDrags(float,float,int) -> b
+    boolean checkNewEdgeDrag(float,float,int,int) -> a
+    boolean checkTouchSlop$17e2abff(android.view.View,float) -> a
+    boolean checkTouchSlop$134632() -> h
+    void releaseViewForPointerUp() -> i
+    boolean isViewUnder(android.view.View,int,int) -> b
+    android.view.View findTopChildUnder(int,int) -> b
+android.support.v4.widget.ViewDragHelper$1 -> android.support.v4.widget.w:
+    float getInterpolation(float) -> getInterpolation
+android.support.v4.widget.ViewDragHelper$Callback -> android.support.v4.widget.x:
+    void onViewDragStateChanged(int) -> a
+    void onViewPositionChanged$5b6f797d(android.view.View,int) -> a
+    void onViewCaptured$5359dc9a(android.view.View) -> b
+    void onViewReleased$17e2ac03(android.view.View,float) -> a
+    void onEdgeTouched$255f295() -> b
+    void onEdgeDragStarted(int,int) -> a
+    int getViewHorizontalDragRange(android.view.View) -> c
+    boolean tryCaptureView$5359dc96(android.view.View) -> a
+    int clampViewPositionHorizontal$17e143b0(android.view.View,int) -> b
+    int clampViewPositionVertical$17e143b0(android.view.View) -> d
+com.book.pong_v4.EntBall -> com.book.pong_v4.a:
+    int mCollisionState -> a
+    float[] mCosTable -> m
+    int mDifficultyOffset -> n
+    boolean mHasCollided -> b
+    float[] mSinTable -> o
+    float mSpeed -> p
+    android.graphics.PointF mVelocity -> c
     void step(float) -> a
-    int calculateSector(com.book.pong_v5.GameModel,com.book.pong_v5.EntPaddle) -> a
     float calculateSpeed(int) -> a
-    int getCollisionType() -> a
-    float getSpeed() -> b
-    android.graphics.PointF getVelocity() -> c
-    void setCollisionType(int) -> b
     void setVelocity(float,float) -> a
-com.book.pong_v5.EntOpponent -> com.book.pong_v5.b:
-    int mDifficultyOffset -> a
-    float mReaction -> b
-    float mSpeed -> c
+com.book.pong_v4.EntOpponent -> com.book.pong_v4.b:
+    int mDifficultyOffset -> b
+    float mReaction -> c
+    float mSpeed -> m
     void calculateSpeed(int) -> a
-    void increaseReaction() -> a
+    void decreaseReaction() -> a
     void step(float) -> a
-com.book.pong_v5.EntPaddle -> com.book.pong_v5.c:
+com.book.pong_v4.EntPaddle -> com.book.pong_v4.c:
     float mSectorSize -> a
-    float getSectorSize() -> b
-com.book.pong_v5.EntPlayer -> com.book.pong_v5.d:
+com.book.pong_v4.EntPlayer -> com.book.pong_v4.d:
     void step(float) -> a
-com.book.pong_v5.GameActivity -> com.book.pong_v5.GameActivity:
-    com.book.pong_v5.GameController mController -> a
-    com.book.simplegameengine_v5.SGDialog mDialog -> b
-    int mDifficultyLevel -> c
-    com.book.pong_v5.GameModel mModel -> d
-    com.book.pong_v5.GameView mView -> e
+com.book.pong_v4.GameActivity -> com.book.pong_v4.GameActivity:
+    com.book.pong_v4.GameController mController -> c
+    com.book.simplegameengine_v4.SGDialog mDialog -> d
+    int mDifficultyLevel -> e
+    com.book.pong_v4.GameModel mModel -> f
+    com.book.pong_v4.GameView mView -> g
     void onCreate(android.os.Bundle) -> onCreate
-    void returnToStartScreen() -> a
+    void onDestroy() -> onDestroy
     void onPause() -> onPause
     void onResume() -> onResume
     void onStop() -> onStop
-    void onRestart() -> onRestart
     void onBackPressed() -> onBackPressed
-    com.book.pong_v5.GameModel access$0(com.book.pong_v5.GameActivity) -> a
-com.book.pong_v5.GameActivity$1 -> com.book.pong_v5.e:
-    com.book.pong_v5.GameActivity this$0 -> a
-    void onTouchOk() -> a
-    void onTouchCancel() -> b
-com.book.pong_v5.GameController -> com.book.pong_v5.f:
-    com.book.simplegameengine_v5.SGGui mGui -> a
-    com.book.pong_v5.GameModel mModel -> b
-    android.graphics.PointF mTempPosition -> c
-    boolean mSendToModel -> d
+    void returnToStartScreen() -> a
+    com.book.pong_v4.GameModel access$0(com.book.pong_v4.GameActivity) -> a
+com.book.pong_v4.GameActivity$1 -> com.book.pong_v4.e:
+    com.book.pong_v4.GameActivity this$0 -> a
+    void onOk() -> a
+    void onCancel() -> b
+com.book.pong_v4.GameController -> com.book.pong_v4.f:
+    com.book.simplegameengine_v4.SGGui mGui -> a
+    com.book.pong_v4.GameModel mModel -> b
+    boolean mSendToModel -> c
+    android.graphics.PointF mTempPosition -> d
     void onDown(android.view.MotionEvent) -> a
-    void onScroll(android.view.MotionEvent,android.view.MotionEvent,float,float) -> a
+    void onScroll$503634e1$2548a35(float) -> a
     void onUp(android.view.MotionEvent) -> b
-com.book.pong_v5.GameModel -> com.book.pong_v5.g:
-    com.book.pong_v5.EntBall mBall -> a
-    int mCurrentState -> b
-    int mDifficultyLevel -> c
-    java.util.ArrayList mEntities -> d
-    boolean mGameOver -> e
-    com.book.pong_v5.TrgGap mGap -> f
-    com.book.simplegameengine_v5.SGTimer mGoalTimer -> g
-    com.book.pong_v5.TrgLeftGoal mLeftGoal -> h
-    com.book.pong_v5.TrgLowerWall mLowerWall -> i
-    com.book.pong_v5.EntOpponent mOpponent -> j
-    com.book.pong_v5.TrgRightGoal mRightGoal -> k
-    int mOpponentScore -> l
-    com.book.pong_v5.EntPaddle mPlayer -> m
-    int mPlayerScore -> n
-    int mPreviousState -> o
-    java.util.Random mRandom -> p
-    com.book.simplegameengine_v5.SGTimer mRestartTimer -> q
-    java.lang.StringBuilder mStringBuilder -> r
-    com.book.pong_v5.TrgUpperWall mUpperWall -> s
-    int mWhoScored -> t
-    void createScene() -> a
-    void movePlayer(float,float) -> a
-    void registerEntity(com.book.simplegameengine_v5.SGEntity) -> a
-    void step(float) -> a
-    void logScore() -> b
-    void resetWorld() -> c
-    void pause() -> d
-    void unpause() -> e
-    com.book.pong_v5.EntBall getBall() -> f
-    int getCurrentState() -> g
-    java.util.ArrayList getEntities() -> h
-    com.book.pong_v5.EntOpponent getOpponent() -> i
-    int getOpponentScore() -> j
-    com.book.pong_v5.EntPaddle getPlayer() -> k
-    int getPlayerScore() -> l
-    void increaseOpponentScore() -> m
-    void increasePlayerScore() -> n
-    boolean isGameOver() -> o
-    void setCurrentState(int) -> a
-    void setWhoScored(int) -> b
-    int whoScored() -> p
-    void _calculateBallAngle() -> r
-com.book.pong_v5.GameView -> com.book.pong_v5.h:
+com.book.pong_v4.GameModel -> com.book.pong_v4.g:
+    com.book.pong_v4.EntBall mBall -> a
+    com.book.pong_v4.EntOpponent mOpponent -> b
+    com.book.pong_v4.EntPlayer mPlayer -> c
+    int mCurrentState -> d
+    java.util.ArrayList mEntities -> e
+    int mDifficultyLevel -> f
+    com.book.simplegameengine_v4.SGTimer mGoalTimer -> g
+    int mOpponentScore -> h
+    int mPlayerScore -> i
+    int mPreviousState -> s
+    java.util.Random mRandom -> j
+    com.book.simplegameengine_v4.SGTimer mRestartTimer -> k
+    java.lang.StringBuilder mStringBuilder -> t
+    int mWhoScored -> l
+    com.book.pong_v4.TrgGap mGap -> m
+    com.book.pong_v4.TrgLeftGoal mLeftGoal -> n
+    com.book.pong_v4.TrgLowerWall mLowerWall -> o
+    com.book.pong_v4.TrgRightGoal mRightGoal -> p
+    com.book.pong_v4.TrgUpperWall mUpperWall -> q
+    void logScore() -> a
+    void pause() -> b
+    void unpause() -> c
+com.book.pong_v4.GameView -> com.book.pong_v4.h:
     boolean mIsDebug -> a
-    com.book.pong_v5.GameModel mModel -> b
-    android.graphics.RectF mTempDrawingArea -> c
-    com.book.simplegameengine_v5.SGSpriteDesc mSprBallDesc -> d
-    com.book.simplegameengine_v5.SGSpriteDesc mSprOpponentDesc -> e
-    com.book.simplegameengine_v5.SGSpriteDesc mSprPlayerDesc -> f
-    com.book.simplegameengine_v5.SGSprite mSprBall -> g
-    com.book.simplegameengine_v5.SGSprite mSprOpponent -> h
-    com.book.simplegameengine_v5.SGSprite mSprPlayer -> i
-    com.book.simplegameengine_v5.SGSoundPool mSoundPool -> j
-    int[] mSounds -> k
-    com.book.simplegameengine_v5.SGMusicPlayer mMusicPlayer -> l
-    java.lang.String mStrGameOver -> m
-    java.lang.String mStrOpponent -> n
-    java.lang.String mStrOpponentScore -> o
-    java.lang.String mStrPaused -> p
-    java.lang.String mStrPlayerScore -> q
-    java.lang.String mStrPlayer -> r
-    java.lang.String mStrScores -> s
-    java.lang.String mStrStart -> t
-    com.book.simplegameengine_v5.SGFont mFntVisitorBig -> u
-    com.book.simplegameengine_v5.SGFont mFntVisitorSmall -> v
-    com.book.simplegameengine_v5.SGGui mGui -> w
-    com.book.simplegameengine_v5.SGGuiButton mBtnPause -> x
-    com.book.simplegameengine_v5.SGGuiContainer mCtnrInfo -> y
-    com.book.simplegameengine_v5.SGGuiContainer mCtnrScore -> z
-    com.book.simplegameengine_v5.SGGuiLabel mLblLowerInfo -> A
-    com.book.simplegameengine_v5.SGGuiLabel mLblUpperInfo -> B
-    com.book.simplegameengine_v5.SGGuiLabel mLblPlayerScore -> C
-    com.book.simplegameengine_v5.SGGuiLabel mLblOpponentScore -> D
+    com.book.pong_v4.GameModel mModel -> b
+    com.book.simplegameengine_v4.SGImage mImgField -> c
+    android.graphics.Rect mTempRectSrc -> d
+    android.graphics.RectF mTempRectFDest -> e
+    com.book.simplegameengine_v4.SGSpriteDesc mSprBallDesc -> f
+    com.book.simplegameengine_v4.SGSpriteDesc mSprOpponentDesc -> g
+    com.book.simplegameengine_v4.SGSpriteDesc mSprPlayerDesc -> h
+    com.book.simplegameengine_v4.SGSprite mSprBall -> i
+    com.book.simplegameengine_v4.SGSprite mSprOpponent -> j
+    com.book.simplegameengine_v4.SGSprite mSprPlayer -> k
+    com.book.simplegameengine_v4.SGFont mFntVisitorBig -> l
+    com.book.simplegameengine_v4.SGFont mFntVisitorSmall -> m
+    com.book.simplegameengine_v4.SGMusicPlayer mMusicPlayer -> n
+    com.book.simplegameengine_v4.SGSoundPool mSoundPool -> o
+    int[] mSounds -> p
+    java.lang.String mStrGameOver -> q
+    java.lang.String mStrOpponent -> r
+    java.lang.String mStrOpponentScore -> s
+    java.lang.String mStrPaused -> t
+    java.lang.String mStrPlayer -> u
+    java.lang.String mStrPlayerScore -> v
+    java.lang.String mStrScores -> w
+    java.lang.String mStrStart -> x
+    com.book.simplegameengine_v4.SGGui mGui -> y
+    com.book.simplegameengine_v4.SGWidgetButton mBtnPause -> z
+    com.book.simplegameengine_v4.SGWidgetContainer mCtnrInfo -> A
+    com.book.simplegameengine_v4.SGWidgetContainer mCtnrScore -> B
+    com.book.simplegameengine_v4.SGWidgetLabel mLblLowerInfo -> C
+    com.book.simplegameengine_v4.SGWidgetLabel mLblOpponentScore -> D
+    com.book.simplegameengine_v4.SGWidgetLabel mLblPlayerScore -> E
+    com.book.simplegameengine_v4.SGWidgetLabel mLblUpperInfo -> F
     void setup() -> a
     void step(android.graphics.Canvas,float) -> a
-    com.book.simplegameengine_v5.SGGui getGui() -> getGui
-    com.book.simplegameengine_v5.SGMusicPlayer getMusicPlayer() -> getMusicPlayer
-    com.book.pong_v5.GameModel access$0(com.book.pong_v5.GameView) -> a
-com.book.pong_v5.GameView$1 -> com.book.pong_v5.i:
-    com.book.pong_v5.GameView this$0 -> a
-    boolean onUp(android.graphics.PointF) -> a
-com.book.pong_v5.MenuScreenActivity -> com.book.pong_v5.MenuScreenActivity:
-    com.book.pong_v5.MenuScreenController mController -> a
-    com.book.pong_v5.MenuScreenView mView -> b
+    com.book.simplegameengine_v4.SGGui getGui() -> getGui
+    com.book.simplegameengine_v4.SGMusicPlayer getMusicPlayer() -> getMusicPlayer
+    com.book.pong_v4.GameModel access$0(com.book.pong_v4.GameView) -> a
+com.book.pong_v4.GameView$1 -> com.book.pong_v4.i:
+    com.book.pong_v4.GameView this$0 -> a
+    boolean onUp$46c6ef76() -> a
+com.book.pong_v4.MenuScreenActivity -> com.book.pong_v4.MenuScreenActivity:
+    com.book.pong_v4.MenuScreenController mController -> c
+    com.book.pong_v4.MenuScreenView mView -> d
     void onCreate(android.os.Bundle) -> onCreate
     void onDestroy() -> onDestroy
     void onPause() -> onPause
     void startNextActivity(android.content.Intent) -> a
-com.book.pong_v5.MenuScreenController -> com.book.pong_v5.j:
-    com.book.simplegameengine_v5.SGGui mGui -> a
+com.book.pong_v4.MenuScreenController -> com.book.pong_v4.j:
+    com.book.simplegameengine_v4.SGGui mGui -> a
     android.graphics.PointF mTempPosition -> b
     void onDown(android.view.MotionEvent) -> a
-    void onScroll(android.view.MotionEvent,android.view.MotionEvent,float,float) -> a
+    void onScroll$503634e1$2548a35(float) -> a
     void onUp(android.view.MotionEvent) -> b
-com.book.pong_v5.MenuScreenView -> com.book.pong_v5.k:
-    com.book.pong_v5.MenuScreenActivity mActivity -> a
-    com.book.simplegameengine_v5.SGGuiButton mBtnEasy -> b
-    com.book.simplegameengine_v5.SGGuiButton mBtnHard -> c
-    com.book.simplegameengine_v5.SGGuiButton mBtnMedium -> d
-    com.book.simplegameengine_v5.SGFont mFnt8bit -> e
-    com.book.simplegameengine_v5.SGGui mGui -> f
-    com.book.simplegameengine_v5.SGImage mImgBackground -> g
+com.book.pong_v4.MenuScreenView -> com.book.pong_v4.k:
+    com.book.pong_v4.MenuScreenActivity mActivity -> a
+    com.book.simplegameengine_v4.SGWidgetButton mBtnEasy -> b
+    com.book.simplegameengine_v4.SGWidgetButton mBtnHard -> c
+    com.book.simplegameengine_v4.SGWidgetButton mBtnMedium -> d
+    com.book.simplegameengine_v4.SGFont mFnt8bit -> e
+    com.book.simplegameengine_v4.SGGui mGui -> f
+    com.book.simplegameengine_v4.SGImage mImgBackground -> g
     android.graphics.PointF mImagePosition -> h
     android.graphics.PointF mImageDimensions -> i
-    com.book.simplegameengine_v5.SGGuiLabel mLblDifficultyLevel -> j
-    com.book.simplegameengine_v5.SGGuiLabel mLblEasy -> k
-    com.book.simplegameengine_v5.SGGuiLabel mLblHard -> l
-    com.book.simplegameengine_v5.SGGuiLabel mLblLoading -> m
-    com.book.simplegameengine_v5.SGGuiLabel mLblMedium -> n
+    com.book.simplegameengine_v4.SGWidgetLabel mLblDifficultyLevel -> j
+    com.book.simplegameengine_v4.SGWidgetLabel mLblEasy -> k
+    com.book.simplegameengine_v4.SGWidgetLabel mLblHard -> l
+    com.book.simplegameengine_v4.SGWidgetLabel mLblLoading -> m
+    com.book.simplegameengine_v4.SGWidgetLabel mLblMedium -> n
     void setup() -> a
     void step(android.graphics.Canvas,float) -> a
-    com.book.simplegameengine_v5.SGGui getGui() -> getGui
-    com.book.simplegameengine_v5.SGGuiLabel access$0(com.book.pong_v5.MenuScreenView) -> a
-com.book.pong_v5.MenuScreenView$1 -> com.book.pong_v5.l:
-    com.book.pong_v5.MenuScreenView this$0 -> a
-    boolean onUp(android.graphics.PointF) -> a
-com.book.pong_v5.MenuScreenView$2 -> com.book.pong_v5.m:
-    com.book.pong_v5.MenuScreenView this$0 -> a
-    boolean onUp(android.graphics.PointF) -> a
-com.book.pong_v5.MenuScreenView$3 -> com.book.pong_v5.n:
-    com.book.pong_v5.MenuScreenView this$0 -> a
-    boolean onUp(android.graphics.PointF) -> a
-com.book.pong_v5.SplashScreenActivity -> com.book.pong_v5.SplashScreenActivity:
-    com.book.pong_v5.SplashScreenView mView -> a
+    com.book.simplegameengine_v4.SGGui getGui() -> getGui
+    com.book.simplegameengine_v4.SGWidgetLabel access$0(com.book.pong_v4.MenuScreenView) -> a
+com.book.pong_v4.MenuScreenView$1 -> com.book.pong_v4.l:
+    com.book.pong_v4.MenuScreenView this$0 -> a
+    boolean onUp$46c6ef76() -> a
+com.book.pong_v4.MenuScreenView$2 -> com.book.pong_v4.m:
+    com.book.pong_v4.MenuScreenView this$0 -> a
+    boolean onUp$46c6ef76() -> a
+com.book.pong_v4.MenuScreenView$3 -> com.book.pong_v4.n:
+    com.book.pong_v4.MenuScreenView this$0 -> a
+    boolean onUp$46c6ef76() -> a
+com.book.pong_v4.SplashScreenActivity -> com.book.pong_v4.SplashScreenActivity:
+    com.book.pong_v4.SplashScreenView mView -> c
     void onCreate(android.os.Bundle) -> onCreate
     void onDestroy() -> onDestroy
-    void startNextActivity() -> a
     void onBackPressed() -> onBackPressed
+    void startNextActivity() -> a
     void onDown(android.view.MotionEvent) -> a
-    void onScroll(android.view.MotionEvent,android.view.MotionEvent,float,float) -> a
+    void onScroll$503634e1$2548a35(float) -> a
     void onUp(android.view.MotionEvent) -> b
-com.book.pong_v5.SplashScreenView -> com.book.pong_v5.o:
-    com.book.simplegameengine_v5.SGImage mImgSplashScreen -> a
+com.book.pong_v4.SplashScreenView -> com.book.pong_v4.o:
+    com.book.simplegameengine_v4.SGImage mImgSplashScreen -> a
     android.graphics.PointF mImagePosition -> b
     android.graphics.PointF mImageDimensions -> c
     void setup() -> a
     void step(android.graphics.Canvas,float) -> a
-com.book.pong_v5.StartScreenActivity -> com.book.pong_v5.StartScreenActivity:
-    com.book.simplegameengine_v5.SGDialog mDialog -> a
-    com.book.pong_v5.StartScreenView mView -> b
+com.book.pong_v4.StartScreenActivity -> com.book.pong_v4.StartScreenActivity:
+    com.book.simplegameengine_v4.SGDialog mDialog -> c
+    com.book.pong_v4.StartScreenView mView -> d
     void onCreate(android.os.Bundle) -> onCreate
-    void onBackPressed() -> onBackPressed
     void onDestroy() -> onDestroy
-    void startNextActivity() -> a
     void onDown(android.view.MotionEvent) -> a
-    void onScroll(android.view.MotionEvent,android.view.MotionEvent,float,float) -> a
+    void onScroll$503634e1$2548a35(float) -> a
     void onUp(android.view.MotionEvent) -> b
-com.book.pong_v5.StartScreenActivity$1 -> com.book.pong_v5.p:
-    com.book.pong_v5.StartScreenActivity this$0 -> a
-    void onTouchOk() -> a
-com.book.pong_v5.StartScreenView -> com.book.pong_v5.q:
-    com.book.simplegameengine_v5.SGImage mImgStartScreen -> a
+    void onBackPressed() -> onBackPressed
+com.book.pong_v4.StartScreenActivity$1 -> com.book.pong_v4.p:
+    com.book.pong_v4.StartScreenActivity this$0 -> a
+    void onOk() -> a
+com.book.pong_v4.StartScreenView -> com.book.pong_v4.q:
+    com.book.simplegameengine_v4.SGImage mImgStartScreen -> a
     android.graphics.PointF mImagePosition -> b
     android.graphics.PointF mImageDimensions -> c
     void setup() -> a
     void step(android.graphics.Canvas,float) -> a
-com.book.pong_v5.TrgGap -> com.book.pong_v5.r:
-    void onHit(com.book.simplegameengine_v5.SGEntity,float) -> a
-com.book.pong_v5.TrgLeftGoal -> com.book.pong_v5.s:
-    void onHit(com.book.simplegameengine_v5.SGEntity,float) -> a
-com.book.pong_v5.TrgLowerWall -> com.book.pong_v5.t:
-    void onHit(com.book.simplegameengine_v5.SGEntity,float) -> a
-com.book.pong_v5.TrgRightGoal -> com.book.pong_v5.u:
-    void onHit(com.book.simplegameengine_v5.SGEntity,float) -> a
-com.book.pong_v5.TrgUpperWall -> com.book.pong_v5.v:
-    void onHit(com.book.simplegameengine_v5.SGEntity,float) -> a
-com.book.simplegameengine_v5.SGActivity -> com.book.a.a:
-    com.book.simplegameengine_v5.SGInputPublisher mInputPublisher -> a
-    com.book.simplegameengine_v5.SGPreferences mPreferences -> b
-    int[] $SWITCH_TABLE$com$book$simplegameengine_v5$SGActivity$SGOrientation -> c
+com.book.pong_v4.TrgGap -> com.book.pong_v4.r:
+    void onHit$72fb74e5(com.book.simplegameengine_v4.SGEntity) -> a
+com.book.pong_v4.TrgLeftGoal -> com.book.pong_v4.s:
+    void onHit$72fb74e5(com.book.simplegameengine_v4.SGEntity) -> a
+com.book.pong_v4.TrgLowerWall -> com.book.pong_v4.t:
+    void onHit$72fb74e5(com.book.simplegameengine_v4.SGEntity) -> a
+com.book.pong_v4.TrgRightGoal -> com.book.pong_v4.u:
+    void onHit$72fb74e5(com.book.simplegameengine_v4.SGEntity) -> a
+com.book.pong_v4.TrgUpperWall -> com.book.pong_v4.v:
+    void onHit$72fb74e5(com.book.simplegameengine_v4.SGEntity) -> a
+com.book.simplegameengine_v4.SGActivity -> com.book.a.a:
+    com.book.simplegameengine_v4.SGInputPublisher mInputPublisher -> a
+    com.book.simplegameengine_v4.SGPreferences mPreferences -> b
     void onCreate(android.os.Bundle) -> onCreate
     void onDestroy() -> onDestroy
     void onPause() -> onPause
@@ -1092,309 +1410,257 @@ com.book.simplegameengine_v5.SGActivity -> com.book.a.a:
     void onResume() -> onResume
     void onStart() -> onStart
     void onStop() -> onStop
-    void enableKeepScreenOn() -> b
-    void enableFullScreen() -> c
+    void enableFullScreen() -> b
     boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
-    com.book.simplegameengine_v5.SGPreferences getPreferences() -> d
-    com.book.simplegameengine_v5.SGInputPublisher getInputPublisher() -> e
-    void setOrientation(com.book.simplegameengine_v5.SGActivity$SGOrientation) -> a
-    void setInputPublisher(com.book.simplegameengine_v5.SGInputPublisher) -> a
-    int[] $SWITCH_TABLE$com$book$simplegameengine_v5$SGActivity$SGOrientation() -> f
-com.book.simplegameengine_v5.SGActivity$SGOrientation -> com.book.a.b:
-    com.book.simplegameengine_v5.SGActivity$SGOrientation LANDSCAPE -> a
-    com.book.simplegameengine_v5.SGActivity$SGOrientation PORTRAIT -> b
-    com.book.simplegameengine_v5.SGActivity$SGOrientation[] ENUM$VALUES -> c
-    com.book.simplegameengine_v5.SGActivity$SGOrientation[] values() -> values
-    com.book.simplegameengine_v5.SGActivity$SGOrientation valueOf(java.lang.String) -> valueOf
-com.book.simplegameengine_v5.SGAnimation -> com.book.a.c:
+    void enableKeepScreenOn() -> c
+    void setInputPublisher(com.book.simplegameengine_v4.SGInputPublisher) -> a
+    com.book.simplegameengine_v4.SGInputPublisher getInputPublisher() -> d
+com.book.simplegameengine_v4.SGAnimation -> com.book.a.b:
     float mAccumulator -> a
     int mCurrentIndex -> b
     float mFrameDuration -> c
-    boolean mIsRunning -> d
-    int mNumberOfRepetitions -> e
-    boolean mResetAfterRunning -> f
-    int[] mTiles -> g
-    int step(float) -> a
+    boolean mHasStarted -> d
+    boolean mIsRunning -> e
+    int mNumberOfRepetitions -> f
+    boolean mResetAfterRunning -> g
+    int[] mTiles -> h
     void start(int) -> a
-    void stop() -> a
-    void stopAndReset() -> b
-    int getCurrentTile() -> c
-com.book.simplegameengine_v5.SGDialog -> com.book.a.d:
-    android.app.AlertDialog mDialog -> a
-    void onTouchOk() -> a
-    void onTouchCancel() -> b
-    void show() -> c
-com.book.simplegameengine_v5.SGDialog$1 -> com.book.a.e:
-    com.book.simplegameengine_v5.SGDialog this$0 -> a
+    void play() -> a
+    void pause() -> b
+    void stop() -> c
+    int step(float) -> a
+    int getCurrentTile() -> d
+com.book.simplegameengine_v4.SGDialog -> com.book.a.c:
+    android.app.AlertDialog mDialog -> b
+    void onOk() -> a
+    void onCancel() -> b
+com.book.simplegameengine_v4.SGDialog$1 -> com.book.a.d:
+    com.book.simplegameengine_v4.SGDialog this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.book.simplegameengine_v5.SGDialog$2 -> com.book.a.f:
-    com.book.simplegameengine_v5.SGDialog this$0 -> a
+com.book.simplegameengine_v4.SGDialog$2 -> com.book.a.e:
+    com.book.simplegameengine_v4.SGDialog this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.book.simplegameengine_v5.SGEntity -> com.book.a.g:
-    android.graphics.RectF mBoundingBox -> a
-    java.lang.String mCategory -> b
-    int mDebugColor -> c
-    com.book.simplegameengine_v5.SGEntity$DebugDrawingStyle mDebugDrawingStyle -> d
-    android.graphics.PointF mDimensions -> e
-    int mFlags -> f
-    int mId -> g
-    boolean mIsActive -> h
-    android.graphics.PointF mPosition -> i
-    com.book.simplegameengine_v5.SGWorld mWorld -> j
+com.book.simplegameengine_v4.SGEntity -> com.book.a.f:
+    android.graphics.RectF mBBoxPadding -> d
+    android.graphics.RectF mBoundingBox -> e
+    java.lang.String mCategory -> f
+    int mDebugColor -> g
+    com.book.simplegameengine_v4.SGEntity$DebugDrawingStyle mDebugDrawingStyle -> h
+    android.graphics.PointF mDimensions -> i
+    int mFlags -> a
+    int mId -> j
+    boolean mIsActive -> b
+    android.graphics.PointF mPosition -> k
+    com.book.simplegameengine_v4.SGWorld mWorld -> l
+    void addFlags(int) -> b
+    boolean hasFlag(int) -> c
+    void removeFlags(int) -> d
     void move(float,float) -> b
     void step(float) -> a
-    boolean isActive() -> d
-    void addFlags(int) -> c
-    boolean hasFlag(int) -> d
-    void removeFlags(int) -> e
-    android.graphics.RectF getBoundingBox() -> e
-    java.lang.String getCategory() -> f
-    int getDebugColor() -> g
-    com.book.simplegameengine_v5.SGEntity$DebugDrawingStyle getDebugDrawingStyle() -> h
-    android.graphics.PointF getDimensions() -> i
-    int getId() -> j
-    android.graphics.PointF getPosition() -> k
-    com.book.simplegameengine_v5.SGWorld getWorld() -> l
-    void setDebugColor(int) -> f
-    void setDebugDrawingStyle(com.book.simplegameengine_v5.SGEntity$DebugDrawingStyle) -> a
-    void setIsActive(boolean) -> a
+    android.graphics.RectF getBoundingBox() -> b
+    int getDebugColor() -> c
+    android.graphics.PointF getDimensions() -> d
+    android.graphics.PointF getPosition() -> e
+    void setBBoxPadding(android.graphics.RectF) -> a
+    void setDebugColor(int) -> e
     void setPosition(float,float) -> c
     void _updateBoundingBox() -> a
-com.book.simplegameengine_v5.SGEntity$DebugDrawingStyle -> com.book.a.h:
-    com.book.simplegameengine_v5.SGEntity$DebugDrawingStyle FILLED -> a
-    com.book.simplegameengine_v5.SGEntity$DebugDrawingStyle OUTLINE -> b
-    com.book.simplegameengine_v5.SGEntity$DebugDrawingStyle[] ENUM$VALUES -> c
-    com.book.simplegameengine_v5.SGEntity$DebugDrawingStyle[] values() -> values
-    com.book.simplegameengine_v5.SGEntity$DebugDrawingStyle valueOf(java.lang.String) -> valueOf
-com.book.simplegameengine_v5.SGFont -> com.book.a.i:
-    android.graphics.PointF mDimensions -> a
-    com.book.simplegameengine_v5.SGTileset mFontTileSet -> b
+com.book.simplegameengine_v4.SGEntity$DebugDrawingStyle -> com.book.a.g:
+    com.book.simplegameengine_v4.SGEntity$DebugDrawingStyle FILLED -> a
+    com.book.simplegameengine_v4.SGEntity$DebugDrawingStyle OUTLINE -> b
+    com.book.simplegameengine_v4.SGEntity$DebugDrawingStyle[] ENUM$VALUES -> c
+    com.book.simplegameengine_v4.SGEntity$DebugDrawingStyle[] values() -> values
+    com.book.simplegameengine_v4.SGEntity$DebugDrawingStyle valueOf(java.lang.String) -> valueOf
+com.book.simplegameengine_v4.SGFont -> com.book.a.h:
+    android.graphics.PointF mFontDimensions -> a
+    com.book.simplegameengine_v4.SGTileset mFontTileSet -> b
     android.graphics.PointF mTempDimensions -> c
-    android.graphics.PointF measureText(com.book.simplegameengine_v5.SGText) -> a
-    android.graphics.PointF getDimensions() -> a
-    com.book.simplegameengine_v5.SGTileset getTileSet() -> b
-com.book.simplegameengine_v5.SGGui -> com.book.a.j:
-    com.book.simplegameengine_v5.SGGuiButton mCurrentButton -> a
-    com.book.simplegameengine_v5.SGRenderer mRenderer -> b
-    com.book.simplegameengine_v5.SGGuiContainer mRoot -> c
+    android.graphics.PointF measureText(com.book.simplegameengine_v4.SGText) -> a
+com.book.simplegameengine_v4.SGGui -> com.book.a.i:
+    com.book.simplegameengine_v4.SGWidgetButton mCurrentButton -> a
+    com.book.simplegameengine_v4.SGRenderer mRenderer -> c
+    com.book.simplegameengine_v4.SGWidgetContainer mRoot -> b
     android.graphics.PointF mTempPosition -> d
     boolean injectDown(android.graphics.PointF) -> a
     boolean injectUp(android.graphics.PointF) -> b
     void render() -> a
-    void update() -> b
-    com.book.simplegameengine_v5.SGGuiContainer getRoot() -> c
-    com.book.simplegameengine_v5.SGGuiButton getCurrentButton() -> d
-    void setCurrentButton(com.book.simplegameengine_v5.SGGuiButton) -> a
     android.graphics.PointF _screenToScene(android.graphics.PointF) -> c
-com.book.simplegameengine_v5.SGGuiButton -> com.book.a.k:
-    int mCurrentTile -> b
-    com.book.simplegameengine_v5.SGGui mGui -> c
-    com.book.simplegameengine_v5.SGTileset mTileset -> d
-    void render(com.book.simplegameengine_v5.SGRenderer) -> a
-    void reset() -> a
-    boolean injectDown(android.graphics.PointF) -> b
-    boolean injectUp(android.graphics.PointF) -> c
-    boolean onDown(android.graphics.PointF) -> d
-    boolean onUp(android.graphics.PointF) -> a
-com.book.simplegameengine_v5.SGGuiContainer -> com.book.a.l:
-    java.util.HashMap mChildren -> a
-    void addChild(java.lang.String,com.book.simplegameengine_v5.SGWidget) -> a
-    boolean injectDown(android.graphics.PointF) -> b
-    boolean injectUp(android.graphics.PointF) -> c
-    void render(com.book.simplegameengine_v5.SGRenderer) -> a
-    com.book.simplegameengine_v5.SGWidget getChild(java.lang.String) -> a
-    void update() -> a_
-    void _updateArea() -> e
-com.book.simplegameengine_v5.SGGuiLabel -> com.book.a.m:
-    com.book.simplegameengine_v5.SGFont mFont -> a
-    com.book.simplegameengine_v5.SGText mText -> b
-    void render(com.book.simplegameengine_v5.SGRenderer) -> a
-    void update() -> a_
-    void setString(java.lang.String) -> a
-com.book.simplegameengine_v5.SGImage -> com.book.a.n:
+com.book.simplegameengine_v4.SGImage -> com.book.a.j:
     android.graphics.Bitmap mBitmap -> a
     android.graphics.Point mDimensions -> b
-    android.graphics.Bitmap getBitmap() -> a
-    android.graphics.Point getDimensions() -> b
-com.book.simplegameengine_v5.SGImageFactory -> com.book.a.o:
+com.book.simplegameengine_v4.SGImageFactory -> com.book.a.k:
     android.content.Context mContext -> a
-    com.book.simplegameengine_v5.SGImage createImage(java.lang.String) -> a
-com.book.simplegameengine_v5.SGInputPublisher -> com.book.a.p:
+    com.book.simplegameengine_v4.SGImage createImage(java.lang.String) -> a
+com.book.simplegameengine_v4.SGInputPublisher -> com.book.a.l:
     android.view.GestureDetector mGestureDetector -> a
     java.util.ArrayList mSubscribers -> b
-    void registerSubscriber(com.book.simplegameengine_v5.SGInputSubscriber) -> a
+    void registerSubscriber(com.book.simplegameengine_v4.SGInputSubscriber) -> a
+    boolean onTouchEvent(android.view.MotionEvent) -> a
     boolean onDown(android.view.MotionEvent) -> onDown
     boolean onFling(android.view.MotionEvent,android.view.MotionEvent,float,float) -> onFling
     void onLongPress(android.view.MotionEvent) -> onLongPress
     boolean onScroll(android.view.MotionEvent,android.view.MotionEvent,float,float) -> onScroll
     void onShowPress(android.view.MotionEvent) -> onShowPress
     boolean onSingleTapUp(android.view.MotionEvent) -> onSingleTapUp
-    boolean onTouchEvent(android.view.MotionEvent) -> a
-com.book.simplegameengine_v5.SGInputSubscriber -> com.book.a.q:
+com.book.simplegameengine_v4.SGInputSubscriber -> com.book.a.m:
     void onDown(android.view.MotionEvent) -> a
-    void onScroll(android.view.MotionEvent,android.view.MotionEvent,float,float) -> a
+    void onScroll$503634e1$2548a35(float) -> a
     void onUp(android.view.MotionEvent) -> b
-com.book.simplegameengine_v5.SGMusicPlayer -> com.book.a.r:
+com.book.simplegameengine_v4.SGMusicPlayer -> com.book.a.n:
     android.content.Context mContext -> a
     android.media.MediaPlayer mMediaPlayer -> b
     boolean mHasInitialized -> c
     boolean mIsPaused -> d
     boolean mIsPlaying -> e
-    void loadMusic(java.lang.String) -> a
-    void play(boolean,float,float) -> a
-    void release() -> a
-    void stop() -> b
-com.book.simplegameengine_v5.SGPreferences -> com.book.a.s:
+com.book.simplegameengine_v4.SGPreferences -> com.book.a.o:
     android.content.SharedPreferences$Editor mEditor -> a
     android.content.SharedPreferences mPreferences -> b
-    com.book.simplegameengine_v5.SGPreferences begin() -> a
-    void end() -> b
-    int getInt(java.lang.String,int) -> a
-    com.book.simplegameengine_v5.SGPreferences putInt(java.lang.String,int) -> b
-com.book.simplegameengine_v5.SGRenderer -> com.book.a.t:
-    android.graphics.Canvas mCanvas -> a
+    int getInt$505cff29(java.lang.String) -> a
+    com.book.simplegameengine_v4.SGPreferences putInt(java.lang.String,int) -> a
+com.book.simplegameengine_v4.SGRenderer -> com.book.a.p:
+    android.graphics.Canvas mTempCanvas -> a
     android.graphics.Paint mTempPaint -> b
     android.graphics.PointF mTempPosition -> c
-    android.graphics.RectF mTempScreenCoordDestination -> d
-    android.graphics.Rect mTempRectSource -> e
-    com.book.simplegameengine_v5.SGView mView -> f
-    com.book.simplegameengine_v5.SGViewport mViewport -> g
+    android.graphics.RectF mTempDstRect -> d
+    com.book.simplegameengine_v4.SGViewport mViewport -> e
     void beginDrawing(android.graphics.Canvas,int,int) -> a
-    void drawImage(com.book.simplegameengine_v5.SGImage,android.graphics.Rect,android.graphics.RectF) -> a
-    void drawImage(com.book.simplegameengine_v5.SGImage,android.graphics.Rect,android.graphics.PointF,android.graphics.PointF) -> a
-    void drawOutlineRect(android.graphics.RectF,int) -> a
-    void drawRect(android.graphics.RectF,int) -> b
-    void drawText(com.book.simplegameengine_v5.SGText,com.book.simplegameengine_v5.SGFont,android.graphics.PointF) -> a
-    void endDrawing() -> a
-    com.book.simplegameengine_v5.SGViewport getViewport() -> b
-    void setViewport(com.book.simplegameengine_v5.SGViewport) -> a
-com.book.simplegameengine_v5.SGSoundPool -> com.book.a.u:
+    void drawRect(android.graphics.RectF,int) -> a
+    void drawImage(com.book.simplegameengine_v4.SGImage,android.graphics.Rect,android.graphics.RectF) -> a
+    void drawImage(com.book.simplegameengine_v4.SGImage,android.graphics.Rect,android.graphics.PointF,android.graphics.PointF) -> a
+com.book.simplegameengine_v4.SGSoundPool -> com.book.a.q:
     android.content.Context mContext -> a
     android.media.SoundPool mSoundPool -> b
     int loadSound(java.lang.String) -> a
-    void playSound(int,float,float,int,float) -> a
-com.book.simplegameengine_v5.SGSprite -> com.book.a.v:
+    void playSound$33ba33b5(int) -> a
+com.book.simplegameengine_v4.SGSprite -> com.book.a.r:
     java.lang.StringBuilder stringBuilder -> a
     java.util.HashMap mAnimations -> b
-    com.book.simplegameengine_v5.SGAnimation mCurrentAnimation -> c
+    com.book.simplegameengine_v4.SGAnimation mCurrentAnimation -> c
     android.graphics.PointF mDimensions -> d
-    com.book.simplegameengine_v5.SGEntity mEntity -> e
+    com.book.simplegameengine_v4.SGEntity mEntity -> e
     boolean mIsVisible -> f
     android.graphics.PointF mPosition -> g
-    com.book.simplegameengine_v5.SGTileset mTileset -> h
+    com.book.simplegameengine_v4.SGTileset mTileset -> h
     void step(float) -> a
-    com.book.simplegameengine_v5.SGAnimation getCurrentAnimation() -> a
+    com.book.simplegameengine_v4.SGAnimation getCurrentAnimation() -> a
     android.graphics.PointF getDimensions() -> b
     android.graphics.PointF getPosition() -> c
-    com.book.simplegameengine_v5.SGTileset getTileSet() -> d
-    void setCurrentAnimation(java.lang.String) -> a
-com.book.simplegameengine_v5.SGSpriteDesc -> com.book.a.w:
+    com.book.simplegameengine_v4.SGTileset getTileSet() -> d
+    void setCurrentAnimation$505cbf4b(java.lang.String) -> a
+com.book.simplegameengine_v4.SGSpriteDesc -> com.book.a.s:
     java.util.HashMap mAnimations -> a
-    com.book.simplegameengine_v5.SGTileset mTileset -> b
-    com.book.simplegameengine_v5.SGSpriteDesc addAnimation(java.lang.String,com.book.simplegameengine_v5.SGAnimation) -> a
-    java.util.HashMap getAnimations() -> a
-    com.book.simplegameengine_v5.SGTileset getTileset() -> b
-    void _createDefaultAnimation() -> c
-com.book.simplegameengine_v5.SGStepwatch -> com.book.a.x:
+    com.book.simplegameengine_v4.SGTileset mTileset -> b
+    com.book.simplegameengine_v4.SGSpriteDesc addAnimation(java.lang.String,com.book.simplegameengine_v4.SGAnimation) -> a
+com.book.simplegameengine_v4.SGStepwatch -> com.book.a.t:
     long mCurrentTime -> a
     long mLastTime -> b
-    float mTimeElapsed -> c
+    float mElapsedTime -> c
     float tick() -> a
-com.book.simplegameengine_v5.SGText -> com.book.a.y:
+com.book.simplegameengine_v4.SGText -> com.book.a.u:
     java.lang.String mText -> a
     char[] mCharacters -> b
-    char[] getCharacters() -> a
-    int getLength() -> b
-    void setString(java.lang.String) -> a
-    void _buildCharArray(java.lang.String) -> b
-com.book.simplegameengine_v5.SGTileset -> com.book.a.z:
+    void _buildCharArray(java.lang.String) -> a
+com.book.simplegameengine_v4.SGTileset -> com.book.a.v:
     android.graphics.Point m2dNumberOfTiles -> a
     android.graphics.PointF mDimensions -> b
     android.graphics.Rect mDrawableTileArea -> c
-    com.book.simplegameengine_v5.SGImage mImage -> d
+    com.book.simplegameengine_v4.SGImage mImage -> d
     android.graphics.Rect mTempTileArea -> e
     android.graphics.Point mTileDimensions -> f
-    com.book.simplegameengine_v5.SGImage getImage() -> a
+    com.book.simplegameengine_v4.SGImage getImage() -> a
     android.graphics.Rect getTile(int) -> a
-com.book.simplegameengine_v5.SGTimer -> com.book.a.aa:
+com.book.simplegameengine_v4.SGTimer -> com.book.a.w:
     float mAccumulator -> a
     boolean mHasStarted -> b
     float mInterval -> c
-    void onInterval() -> a
-    void start() -> b
+    void start() -> a
     boolean step(float) -> a
-    void stopAndReset() -> c
-    boolean hasStarted() -> d
-com.book.simplegameengine_v5.SGTrigger -> com.book.a.ab:
+    void stopAndReset() -> b
+    boolean hasStarted() -> c
+com.book.simplegameengine_v4.SGTrigger -> com.book.a.x:
     java.util.ArrayList mObservedEntities -> a
-    boolean addObservedEntity(com.book.simplegameengine_v5.SGEntity) -> a
-    void onHit(com.book.simplegameengine_v5.SGEntity,float) -> a
+    boolean addObservedEntity(com.book.simplegameengine_v4.SGEntity) -> b
+    void onHit$72fb74e5(com.book.simplegameengine_v4.SGEntity) -> a
     void step(float) -> a
-com.book.simplegameengine_v5.SGView -> com.book.a.ac:
-    com.book.simplegameengine_v5.SGImageFactory mImageFactory -> a
-    com.book.simplegameengine_v5.SGRenderer mRenderer -> b
-    com.book.simplegameengine_v5.SGStepwatch mStepwatch -> c
-    android.graphics.Point mViewDimensions -> d
+com.book.simplegameengine_v4.SGView -> com.book.a.y:
+    android.graphics.Point mDimensions -> a
+    com.book.simplegameengine_v4.SGImageFactory mImageFactory -> b
+    com.book.simplegameengine_v4.SGRenderer mRenderer -> c
+    com.book.simplegameengine_v4.SGStepwatch mStepwatch -> d
     void onDraw(android.graphics.Canvas) -> onDraw
     void step(android.graphics.Canvas,float) -> a
     void onSizeChanged(int,int,int,int) -> onSizeChanged
     void setup() -> a
-    com.book.simplegameengine_v5.SGImageFactory getImageFactory() -> getImageFactory
-    com.book.simplegameengine_v5.SGRenderer getRenderer() -> getRenderer
-    android.graphics.Point getViewDimensions() -> getViewDimensions
-com.book.simplegameengine_v5.SGViewport -> com.book.a.ad:
-    android.graphics.PointF mDimensions -> a
-    android.graphics.Rect mDrawingArea -> b
-    android.graphics.Point mOffsetFromOrigin -> c
-    android.graphics.PointF mScalingFactor -> d
-    android.graphics.Rect getDrawingArea() -> a
-    android.graphics.Point getOffsetFromOrigin() -> b
-    android.graphics.PointF getScalingFactor() -> c
-com.book.simplegameengine_v5.SGViewport$ScalingMode -> com.book.a.ae:
-    com.book.simplegameengine_v5.SGViewport$ScalingMode FULL_SCREEN -> a
-    com.book.simplegameengine_v5.SGViewport$ScalingMode FULL_SCREEN_KEEP_ORIGINAL_ASPECT -> b
-    com.book.simplegameengine_v5.SGViewport$ScalingMode INTEGER_RATIO -> c
-    com.book.simplegameengine_v5.SGViewport$ScalingMode ORIGINAL -> d
-    com.book.simplegameengine_v5.SGViewport$ScalingMode[] ENUM$VALUES -> e
-    com.book.simplegameengine_v5.SGViewport$ScalingMode[] values() -> values
-    com.book.simplegameengine_v5.SGViewport$ScalingMode valueOf(java.lang.String) -> valueOf
-com.book.simplegameengine_v5.SGWidget -> com.book.a.af:
-    android.graphics.PointF mAbsolutePosition -> e
-    com.book.simplegameengine_v5.SGWidget$Alignment mAlignment -> f
-    android.graphics.RectF mArea -> g
-    android.graphics.PointF mDimensions -> h
-    boolean mIsEnabled -> i
-    boolean mIsVisible -> j
-    com.book.simplegameengine_v5.SGWidget mParent -> k
-    android.graphics.PointF mRelativePosition -> l
-    android.graphics.Point mSceneDimensions -> m
-    java.lang.String mType -> n
-    void update() -> a_
-    boolean injectDown(android.graphics.PointF) -> b
-    boolean injectUp(android.graphics.PointF) -> c
-    boolean onDown(android.graphics.PointF) -> d
-    boolean onUp(android.graphics.PointF) -> a
-    void render(com.book.simplegameengine_v5.SGRenderer) -> a
-    android.graphics.RectF getArea() -> b
-    boolean isEnabled() -> c
-    boolean isVisible() -> d
-    void setIsEnabled(boolean) -> a
-    void setIsVisible(boolean) -> b
-    void setParent(com.book.simplegameengine_v5.SGWidget) -> a
+    android.graphics.Point getDimensions() -> getDimensions
+    com.book.simplegameengine_v4.SGImageFactory getImageFactory() -> getImageFactory
+    com.book.simplegameengine_v4.SGRenderer getRenderer() -> getRenderer
+com.book.simplegameengine_v4.SGViewport -> com.book.a.z:
+    android.graphics.Rect mDrawingArea -> a
+    android.graphics.Point mOffsetFromOrigin -> b
+    android.graphics.PointF mScalingFactor -> c
+com.book.simplegameengine_v4.SGViewport$ScalingMode -> com.book.a.aa:
+    com.book.simplegameengine_v4.SGViewport$ScalingMode FULL_SCREEN -> a
+    com.book.simplegameengine_v4.SGViewport$ScalingMode FULL_SCREEN_KEEP_ORIGINAL_ASPECT -> b
+    com.book.simplegameengine_v4.SGViewport$ScalingMode INTEGER_RATIO -> c
+    com.book.simplegameengine_v4.SGViewport$ScalingMode ORIGINAL -> d
+    com.book.simplegameengine_v4.SGViewport$ScalingMode[] ENUM$VALUES -> e
+    com.book.simplegameengine_v4.SGViewport$ScalingMode[] values() -> values
+    com.book.simplegameengine_v4.SGViewport$ScalingMode valueOf(java.lang.String) -> valueOf
+com.book.simplegameengine_v4.SGWidget -> com.book.a.ab:
+    android.graphics.PointF mAbsolutePosition -> b
+    com.book.simplegameengine_v4.SGWidget$Alignment mAlignment -> c
+    android.graphics.RectF mArea -> d
+    android.graphics.PointF mDimensions -> e
+    boolean mIsEnabled -> f
+    boolean mIsVisible -> g
+    com.book.simplegameengine_v4.SGWidget mParent -> h
+    android.graphics.PointF mRelativePosition -> i
+    android.graphics.Point mSceneDimensions -> j
+    java.lang.String mType -> k
     void setSceneDimensions(android.graphics.Point) -> a
-com.book.simplegameengine_v5.SGWidget$Alignment -> com.book.a.ag:
-    com.book.simplegameengine_v5.SGWidget$Alignment Center -> a
-    com.book.simplegameengine_v5.SGWidget$Alignment Left -> b
-    com.book.simplegameengine_v5.SGWidget$Alignment Right -> c
-    com.book.simplegameengine_v5.SGWidget$Alignment[] ENUM$VALUES -> d
-    com.book.simplegameengine_v5.SGWidget$Alignment[] values() -> values
-    com.book.simplegameengine_v5.SGWidget$Alignment valueOf(java.lang.String) -> valueOf
-com.book.simplegameengine_v5.SGWorld -> com.book.a.ah:
-    com.book.simplegameengine_v5.SGView mView -> a
-    android.graphics.Point mWorldDimensions -> b
+    void update() -> b
+    boolean injectDown(android.graphics.PointF) -> a
+    boolean injectUp(android.graphics.PointF) -> b
+    boolean onDown$46c6ef76() -> c
+    boolean onUp$46c6ef76() -> a
+    void render(com.book.simplegameengine_v4.SGRenderer) -> a
+    android.graphics.RectF getArea() -> d
+    boolean isEnabled() -> e
+    boolean isVisible() -> f
+    void setIsEnabled$1385ff() -> g
+    void setIsVisible(boolean) -> a
+    void setParent(com.book.simplegameengine_v4.SGWidget) -> a
+com.book.simplegameengine_v4.SGWidget$Alignment -> com.book.a.ac:
+    com.book.simplegameengine_v4.SGWidget$Alignment Center -> a
+    com.book.simplegameengine_v4.SGWidget$Alignment Left -> b
+    com.book.simplegameengine_v4.SGWidget$Alignment Right -> c
+    com.book.simplegameengine_v4.SGWidget$Alignment[] ENUM$VALUES -> d
+    com.book.simplegameengine_v4.SGWidget$Alignment[] values() -> values
+    com.book.simplegameengine_v4.SGWidget$Alignment valueOf(java.lang.String) -> valueOf
+com.book.simplegameengine_v4.SGWidgetButton -> com.book.a.ad:
+    int mCurrentTile -> l
+    com.book.simplegameengine_v4.SGGui mGui -> m
+    com.book.simplegameengine_v4.SGTileset mTileset -> n
+    void render(com.book.simplegameengine_v4.SGRenderer) -> a
+    void reset() -> h
+    boolean injectDown(android.graphics.PointF) -> a
+    boolean injectUp(android.graphics.PointF) -> b
+    boolean onDown$46c6ef76() -> c
+    boolean onUp$46c6ef76() -> a
+com.book.simplegameengine_v4.SGWidgetContainer -> com.book.a.ae:
+    java.util.HashMap mChildren -> a
+    void addChild(java.lang.String,com.book.simplegameengine_v4.SGWidget) -> a
+    boolean injectDown(android.graphics.PointF) -> a
+    boolean injectUp(android.graphics.PointF) -> b
+    void render(com.book.simplegameengine_v4.SGRenderer) -> a
+    void update() -> b
+    void _updateArea() -> h
+com.book.simplegameengine_v4.SGWidgetLabel -> com.book.a.af:
+    com.book.simplegameengine_v4.SGFont mFont -> a
+    com.book.simplegameengine_v4.SGText mText -> l
+    void render(com.book.simplegameengine_v4.SGRenderer) -> a
+    void update() -> b
+    void setString(java.lang.String) -> a
+com.book.simplegameengine_v4.SGWorld -> com.book.a.ag:
+    android.graphics.Point mDimensions -> r
     boolean collisionTest(android.graphics.RectF,android.graphics.RectF) -> a
-    void createScene() -> a
-    void registerEntity(com.book.simplegameengine_v5.SGEntity) -> a
-    void step(float) -> a
-    android.graphics.Point getWorldDimensions() -> q
-    void setView(com.book.simplegameengine_v5.SGView) -> a
